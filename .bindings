@@ -20,6 +20,8 @@ replace mode - R
 
 visual mode - v (press it in normal mode)
 
+replace mode - R
+
 line wised visual mode - V (upper case, in normal mode)
 
 block wised visual mode - control+v
@@ -161,7 +163,9 @@ make symlink - ln -s [source] [destination]
 
 better command to view docs - bat [filename]
 
-find file with fzf (include hidden file) - find DirsRoot/ -maxdepth 1 -type f | fzf
+open file explorer 'ranger' - rr
+
+fzf find file (or dir) and open in vim - vimfzf
 
 --------------------------------------------------
 git-

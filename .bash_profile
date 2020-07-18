@@ -1,16 +1,14 @@
 alias ll='ls -lh'
 
+alias cdff='cd $(ls -a | fzf)'
+
+alias vimff='vim $(ls -a | fzf)'
+
 alias home='clear && cat ~/.startup_art.txt'
 
-alias cd1='cd ..'
+alias rr='ranger'
 
-alias cd2="cd ../.."
-
-alias cd3="cd ../../.."
-
-alias cd4="cd ../../../.."
-
-alias cd5="cd ../../../../.."
+alias ..='cd ..'
 
 alias bindings="python3 ~/.auto_show_bindings.py"
 
@@ -30,13 +28,13 @@ export PATH=${PATH}:/usr/local/opt/llvm/bin/
 
 export TERM=xterm-256color
 
-export VISUAL=vim;
+export VISUAL=nvim;
 
-export EDITOR=vim;
+export EDITOR=nvim;
 
 alias tmuxa='tmux a -t'
 
-alias top='htop'
+alias top='gotop'
 
 alias tmuxkill='tmux kill-session'
 
@@ -48,10 +46,6 @@ export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview '(highlight -O 
 
 set -o vi
 
-# pfetch settings
-PF_INFO="ascii title os host uptime memory shell editor"
-EDITOR="neovim"
-SHELL="zsh"
 
 # Setting PATH for Python 3.7
 # The original version is saved in .bash_profile.pysave
@@ -73,4 +67,4 @@ PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
 # fi
 # unset __conda_setup
 # <<< conda init <<<
-pfetch
+cat ~/.startup_art.txt

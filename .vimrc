@@ -1,30 +1,29 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-" plugin list
-Plugin 'gmarik/Vundle.vim'
-Plugin 'joshdick/onedark.vim'
-Plugin 'sheerun/vim-polyglot'
-Plugin 'itchyny/lightline.vim'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'preservim/nerdcommenter'
-Plugin 'benmills/vimux'
-Plugin 'majutsushi/tagbar'
-Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plugin 'junegunn/fzf.vim'
-Plugin 'neoclide/coc.nvim', {'branch': 'release'}
-Plugin 'Yggdroot/indentLine'
-Plugin 'ervandew/supertab'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'francoiscabrol/ranger.vim'
-Plugin 'rbgrouleff/bclose.vim'
+" Plugins go here
+Plug 'joshdick/onedark.vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'itchyny/lightline.vim'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'preservim/nerdcommenter'
+Plug 'benmills/vimux'
+Plug 'majutsushi/tagbar', {'on':'TagbarToggle'}
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'Yggdroot/indentLine'
+Plug 'ervandew/supertab'
+Plug 'jiangmiao/auto-pairs'
+Plug 'francoiscabrol/ranger.vim', {'on' : 'Ranger'}
+Plug 'rbgrouleff/bclose.vim', {'on' : 'Ranger'}
+Plug 'yuttie/comfortable-motion.vim'
+Plug 'ChristianChiarulli/codi.vim', {'on' : 'Codi'}
+Plug 'vimwiki/vimwiki'
 
-call vundle#end()            " required
-filetype plugin indent on    " required
+call plug#end()
 
 "color theme
 hi CursorLineNr cterm=bold ctermfg=Green ctermbg=NONE
@@ -53,12 +52,22 @@ let g:lightline = {
   \ }
 
 " settings
+syntax on
 set mouse=a
 set hidden
 set encoding=utf-8
 set clipboard=unnamed
 set cursorline
 set number relativenumber
+set formatoptions-=cro
+set tabstop=4
+set shiftwidth=4
+" fold settings
+set foldmethod=syntax
+set foldlevel=10
+set foldnestmax=3 
+"end fold settings
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_guide_size = 1
 let g:indent_guides_indent_levels = 3
@@ -73,6 +82,9 @@ vnoremap d "_d
 "indent line
 set list lcs=tab:\|\ 
 let g:indentLine_char = '|'
+"comfortable motion
+let g:comfortable_motion_friction = 52.0
+let g:comfortable_motion_air_drag = 8.0
 
 " mappings
 let mapleader = ','
@@ -90,18 +102,20 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)
 map <silent> <leader>b :Buffers <CR>
-map <silent> <leader>w :w <CR>
+map <silent> <leader>s :w <CR>
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 nmap 0 ^
 nmap <C-g> $
-
-
+map <leader>f :Ranger <CR>
+" vim's native search is annoying, often miss click it
+map n <Nop>
+map <C-c> <Nop>
 " run program
 let file=expand("%:p")
 let exe=expand("%:p:r")
 autocmd Filetype c execute "map <silent> <C-c> :w <CR> :VimuxPromptCommand <CR> cd " . expand("%:p:h") ." && gcc " . file ." -o " . exe ." && " . exe ." <CR>"
-autocmd Filetype python execute "map <silent> <C-c>> :w <CR> :VimuxPromptCommand <CR> python " . file ."<CR>"
+autocmd Filetype python execute "nmap <silent> <C-c>> :w <CR> :VimuxPromptCommand <CR> python " . file ."<CR>"
 autocmd Filetype cpp execute "map <silent> <C-c> :w <CR> :VimuxPromptCommand <CR> cd " . expand("%:p:h") ." && g++ " . file ." -o " . exe ." && " . exe ." <CR>"
 
 " lightline bufferline
