@@ -22,6 +22,7 @@ Plug 'rbgrouleff/bclose.vim', {'on' : 'Ranger'}
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'ChristianChiarulli/codi.vim', {'on' : 'Codi'}
 Plug 'vimwiki/vimwiki'
+Plug 'rakr/vim-two-firewatch'
 
 call plug#end()
 
@@ -36,7 +37,7 @@ if (has("autocmd"))
     autocmd ColorScheme * call onedark#extend_highlight("CursorLineNr", { "fg": { "gui": "66FF66" } })
   augroup END
 endif
-colorscheme onedark 
+colorscheme onedark
 if (has("nvim"))
     "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
     let $NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -53,6 +54,7 @@ let g:lightline = {
 
 " settings
 syntax on
+"set background=dark
 set mouse=a
 set hidden
 set encoding=utf-8
@@ -108,6 +110,9 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 nmap 0 ^
 nmap <C-g> $
 map <leader>f :Ranger <CR>
+nmap <leader>n :bn <CR>
+nmap <leader>p :bp <CR>
+nmap <leader>d :bd <CR>
 " vim's native search is annoying, often miss click it
 map n <Nop>
 map <C-c> <Nop>
@@ -131,3 +136,8 @@ autocmd Filetype cpp execute "map <silent> <C-c> :w <CR> :VimuxPromptCommand <CR
       "\   'buffers': 'tabsel'
       "\ }
       "\ }
+
+" vimwiki syntax highlights
+hi VimwikiLink guifg=#98D4F2 gui=underline
+hi VimwikiHeader2 guifg=orange 
+hi VimwikiBoldItalic guifg=#8982C9

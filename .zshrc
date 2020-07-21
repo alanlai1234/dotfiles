@@ -1,9 +1,6 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
 
 # Start configuration added by Zim install {{{
 #
@@ -133,8 +130,6 @@ bindkey -M vicmd 'j' history-substring-search-down
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export PATH="/opt/anaconda3/bin/python":$PATH
-
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -198,8 +193,6 @@ export PATH="/opt/anaconda3/bin/python":$PATH
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sublime zsh-syntax-highlighting)
-
 
 # User configuration
 
@@ -227,28 +220,6 @@ plugins=(git sublime zsh-syntax-highlighting)
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/sophieyou/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/sophieyou/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/sophieyou/opt/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/sophieyou/opt/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-(( ! ${+functions[p10k]} )) || p10k finalize
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 source ~/.bash_profile
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -267,3 +238,14 @@ vterm_printf(){
 	  printf "\e]%s\e\\" "$1"
     fi
 }
+
+# pure theme
+fpath+=$HOME/.zsh/pure
+autoload -U promptinit; promptinit
+prompt pure
+zstyle :prompt:pure:path color 39
+zstyle :prompt:pure:prompt:success color 118
+zstyle :prompt:pure:git:branch color 178
+zstyle :prompt:pure:execution_time color 229
+PURE_CMD_MAX_EXEC_TIME=2
+zstyle :prompt:pure:user show yes

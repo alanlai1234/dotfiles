@@ -1,8 +1,4 @@
-alias ll='ls -lh'
-
-alias cdff='cd $(ls -a | fzf)'
-
-alias vimff='vim $(ls -a | fzf)'
+alias fnd='fd -d 1 -H'
 
 alias home='clear && cat ~/.startup_art.txt'
 
@@ -10,11 +6,13 @@ alias rr='ranger'
 
 alias ..='cd ..'
 
+alias ls='exa'
+
 alias bindings="python3 ~/.auto_show_bindings.py"
 
-alias current="echo $$"
+alias cur="echo $$"
 
-alias la='ls -al'
+alias la='exa -aghl --git'
 
 alias rmd='rm -rf'
 
@@ -42,10 +40,19 @@ alias tmuxnew='tmux new-session'
 
 alias vim='nvim'
 
-export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview '(highlight -O ansi {} || cat {}) 2> /dev/null | head -500'"
-
 set -o vi
 
+# fzf settings
+export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview '(highlight -O ansi {} || cat {}) 2> /dev/null | head -500'"
+export FZF_DEFAULT_COMMAND="fd -d 1 -H"
+_fzf_compgen_dir() {
+  fd -d 1 -H 
+}
+_fzf_complete_cd(){
+  _fzf_complete --multi --reverse --prompt="cd" -- "$@" < <(
+	fd -d 1 -H -t d
+  )
+}
 
 # Setting PATH for Python 3.7
 # The original version is saved in .bash_profile.pysave
