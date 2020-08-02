@@ -1,8 +1,6 @@
 alias fnd='fd -d 1 -H'
 
-alias home='clear && cat ~/.startup_art.txt'
-
-alias rr='ranger'
+alias home='clear'
 
 alias ..='cd ..'
 
@@ -29,6 +27,8 @@ export TERM=xterm-256color
 export VISUAL=nvim;
 
 export EDITOR=nvim;
+
+alias vimrc='vim ~/.config/nvim/vim_conf/$(ls ~/.config/nvim/vim_conf | fzf)'
 
 alias tmuxa='tmux a -t'
 
@@ -74,4 +74,3 @@ PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
 # fi
 # unset __conda_setup
 # <<< conda init <<<
-cat ~/.startup_art.txt

@@ -1,6 +1,13 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
 
 # Start configuration added by Zim install {{{
 #
@@ -240,12 +247,17 @@ vterm_printf(){
 }
 
 # pure theme
-fpath+=$HOME/.zsh/pure
-autoload -U promptinit; promptinit
-prompt pure
-zstyle :prompt:pure:path color 39
-zstyle :prompt:pure:prompt:success color 118
-zstyle :prompt:pure:git:branch color 178
-zstyle :prompt:pure:execution_time color 229
-PURE_CMD_MAX_EXEC_TIME=2
-zstyle :prompt:pure:user show yes
+#fpath+=$HOME/.zsh/pure
+#autoload -U promptinit; promptinit
+#prompt pure
+#zstyle :prompt:pure:path color 39
+#zstyle :prompt:pure:prompt:success color 118
+#zstyle :prompt:pure:git:branch color 178
+#zstyle :prompt:pure:execution_time color 229
+#PURE_CMD_MAX_EXEC_TIME=2
+#zstyle :prompt:pure:user show yes
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+(( ! ${+functions[p10k]} )) || p10k finalize
+test -e /Users/sophieyou/.iterm2_shell_integration.zsh && source /Users/sophieyou/.iterm2_shell_integration.zsh || true
