@@ -22,12 +22,13 @@ Plug 'ChristianChiarulli/codi.vim', {'on' : 'Codi'}
 Plug 'vimwiki/vimwiki'
 Plug 'rhysd/clever-f.vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'paradigm/TextObjectify'
 Plug 'honza/vim-snippets'
 Plug 'thaerkh/vim-workspace'
 Plug 'mengelbrecht/lightline-bufferline'
 Plug 'josa42/vim-lightline-coc'
 Plug 'tpope/vim-dadbod'
 Plug 'ap/vim-buftabline'
+Plug 'wellle/targets.vim'
+Plug 'chaoren/vim-wordmotion'
 
 call plug#end()

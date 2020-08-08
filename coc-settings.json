@@ -1,0 +1,13 @@
+{
+	"coc.preferences.hoverTarget": "float",
+	"suggest.floatEnable": true,
+	// explorer
+  "explorer.width": 30,
+  "explorer.icon.enableNerdfont": true,
+  "explorer.keyMappings": {
+	"v": "open:vsplit"
+  },
+  "explorer.file.showHiddenFiles": true,
+  "yank.list.maxsize": 21,
+  "yank.highlight.duration": 200
+}

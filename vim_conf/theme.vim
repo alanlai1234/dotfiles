@@ -26,13 +26,10 @@ endif
 set showtabline=2
 let g:lightline = {
 	  \ 'colorscheme': 'onedark',
-      \ 'tabline': {
-      \   'left': [ ['buffers'] ],
-      \   'right': [ ['close'] ]
-      \ },
-      \ 'component_type': {
-      \   'buffers': 'tabsel'
-      \ },
+	  \ 'tabline': {
+	  \   'left': [ ['buffers'] ],
+	  \   'right': [ ['close'] ]
+	  \ },
 	  \ 'enable': {
 	  \   'statusline': 1,
 	  \   'tabline':1
@@ -41,7 +38,7 @@ let g:lightline = {
 	  \ 	'left': [ [ 'mode', 'paste',  'coc_errors', 'coc_warnings', 'coc_ok' ], [ 'readonly', 'filename', 'modified' ] ],
 	  \ },
 	  \ 'separator': {'left': '', 'right': ''},
-      \ }
+	  \ }
 
 call lightline#coc#register()
 

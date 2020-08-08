@@ -1,0 +1,72 @@
+{
+  "lists": {
+    "%2FUsers%2Fsophieyou%2FDesktop%2Falan%2Fstore_sys": [
+      "ex"
+    ],
+    "%2FUsers%2Fsophieyou%2FDesktop%2Falan%2Fscore_sys": [
+      "mark"
+    ],
+    "%2FUsers%2Fsophieyou%2FDesktop%2Falan": [
+      "sni"
+    ]
+  },
+  "marketplace": {
+    "%2FUsers%2Fsophieyou%2FDesktop%2Falan%2Fstore_sys": [
+      "clang",
+      "python",
+      "tab"
+    ],
+    "%2FUsers%2Fsophieyou%2FDesktop%2Falan%2Fscore_sys": [
+      "auto"
+    ],
+    "%2FUsers%2Fsophieyou%2FDesktop%2Falan%2Ftyping_game": [
+      "q"
+    ],
+    "%2FUsers%2Fsophieyou%2FDesktop%2Falan%2Ftodo": [
+      "snip",
+      "sni",
+      "discord",
+      "expl",
+      "dad",
+      "status",
+      "vim"
+    ],
+    "%2FUsers%2Fsophieyou": [
+      "pyright",
+      "y"
+    ]
+  },
+  "commands": {
+    "%2FUsers%2Fsophieyou%2FDesktop%2Falan%2Fscore_sys": [
+      "python",
+      "python.se",
+      "python.set"
+    ],
+    "%2FUsers%2Fsophieyou%2FDesktop%2Falan%2Ftyping_game": [
+      "python.set"
+    ],
+    "%2FUsers%2Fsophieyou%2FDesktop%2Falan%2Ftodo": [
+      "dis",
+      "snip",
+      "expl"
+    ],
+    "%2FUsers%2Fsophieyou%2F": {
+      "config%2Fnvim": [
+        "ex"
+      ]
+    }
+  },
+  "explorerActions": {
+    "%2FUsers%2Fsophieyou": [
+      "j"
+    ]
+  },
+  "snippets": {
+    "%2FUsers%2Fsophieyou%2FDesktop%2Falan": [
+      "arg"
+    ],
+    "%2FUsers%2Fsophieyou%2FDesktop%2Falan%2Ftyping_game": [
+      "ar"
+    ]
+  }
+}

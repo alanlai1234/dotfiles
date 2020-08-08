@@ -6,7 +6,7 @@ inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-l> <Right>
 map <silent> <C-t> :TagbarToggle <CR>
-map / :BLines <CR>
+map <silent> / :BLines <CR>
 ab qq q!
 nnoremap <silent> <F5> :NERDTreeToggle<CR>
 let g:SuperTabDefaultCompletionType = "<c-n>"
@@ -17,6 +17,7 @@ map <silent> <leader>b :Buffers <CR>
 map <silent> <leader>s :w <CR>
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nnoremap <silent> <leader>y  :<C-u>CocList -A --normal yank<cr>
 nmap 0 ^
 nmap <C-g> $
 "map <leader>f :Np <CR>
@@ -40,3 +41,4 @@ nmap ; :
 " coc-explorer
 nmap <silent> <leader>f :CocCommand explorer<CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+

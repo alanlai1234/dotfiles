@@ -1,3 +1,4 @@
+set nocompatible
 syntax on
 set mouse=a
 set hidden
@@ -66,6 +67,66 @@ let g:coc_explorer_global_presets = {
 \   }
 \ }
 
+"workspace config
 let g:workspace_create_new_tabs = 0
 
-let g:lightline#bufferline#shorten_path=0
+" make vim smoother
+set timeoutlen=1000
+set ttimeoutlen=0
+
+"fzf
+"let $FZF_DEFAULT_OPTS='--color=dark --color=fg:7,bg:-1,hl:1,fg+:#FFFFFF,bg+:0,hl+:1 --color=info:0,prompt:0,pointer:12,marker:4,spinner:11,header:-1 --layout=reverse  --margin=1,4'
+
+"let g:fzf_colors =
+            "\ { 'fg':      ['fg', 'Normal'],
+            "\ 'bg':      ['bg', 'Normal'],
+            "\ 'hl':      ['fg', 'Comment'],
+            "\ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+            "\ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+            "\ 'hl+':     ['fg', 'Statement'],
+            "\ 'info':    ['fg', 'PreProc'],
+            "\ 'prompt':  ['fg', 'Conditional'],
+            "\ 'pointer': ['fg', 'Exception'],
+            "\ 'marker':  ['fg', 'Keyword'],
+            "\ 'spinner': ['fg', 'Label'],
+            "\ 'header':  ['fg', 'Comment'] }
+"let g:fzf_colors ={
+			"\ 'fg':      7,
+			"\ 'bg':      -1,
+			"\ 'hl':      1,
+			"\ 'fg+':     '#FFFFFF',
+			"\ 'bg+':     0,
+			"\ 'hl+':     1,
+			"\ 'info':    0,
+			"\ 'prompt':  0,
+			"\ 'pointer': 12,
+			"\ 'marker':  4,
+			"\ 'spinner': 11,
+			"\ 'header':  -1 }
+
+"let g:fzf_layout = { 'window': 'call FloatingFZF()' }
+
+function! FloatingFZF()
+  let buf = nvim_create_buf(v:false, v:true)
+  call setbufvar(buf, '&signcolumn', 'no')
+
+  let height = float2nr(20)
+  let width = float2nr(80)
+  let horizontal = float2nr((&columns - width) / 2)
+  let vertical = 1
+
+  let opts = {
+        \ 'relative': 'editor',
+        \ 'row': vertical,
+        \ 'col': horizontal,
+        \ 'width': width,
+        \ 'height': height,
+        \ 'style': 'minimal'
+        \ }
+
+  call nvim_open_win(buf, v:true, opts)
+endfunction
+
+"autocmd! FileType fzf set laststatus=0 noshowmode noruler
+  "\| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+

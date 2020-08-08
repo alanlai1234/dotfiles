@@ -1,0 +1,14 @@
+38f66a9aa62aba75d4dd6cfefb34deda|file:///Users/sophieyou/Desktop/alan/dotfiles/vim_conf/settings.vim|8|5|v|vim
+	number 
+7e533f2808f8a509360af50198908005|file:///Users/sophieyou/Desktop/alan/dotfiles/vim_conf/plugins.vim|4|1|v|vim
+	call plug
+d9e6fb0c07c8de7c7bb301ad294f008a|file:///Users/sophieyou/Desktop/alan/dotfiles/vim_conf/mappings.vim|1|1|v|vim
+	map 
+b7b530e169f45c731ed327198d8b690b|file:///Users/sophieyou/Desktop/alan/dotfiles/vim_conf/mappings.vim|2|1|v|vim
+	let 
+e8ca291dcb675b5391ce5ddf9afdb142|file:///Users/sophieyou/Desktop/alan/dotfiles/vim_conf/mappings.vim|3|1|v|vim
+	imap 
+99db3c3acb39c649c6afdfbfba3e26fb|file:///Users/sophieyou/Desktop/alan/dotfiles/vim_conf/plugins.vim|30|10|v|vim
+	vim-buftabline
+3f9178c25b78ed8bed19091bcb62e266|file:///Users/sophieyou/Desktop/alan/tik_tak_toe.cpp|26|6|v|cpp
+	condition
