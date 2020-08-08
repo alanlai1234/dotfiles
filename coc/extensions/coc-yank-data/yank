@@ -12,3 +12,106 @@ e8ca291dcb675b5391ce5ddf9afdb142|file:///Users/sophieyou/Desktop/alan/dotfiles/v
 	vim-buftabline
 3f9178c25b78ed8bed19091bcb62e266|file:///Users/sophieyou/Desktop/alan/tik_tak_toe.cpp|26|6|v|cpp
 	condition
+bbaafd6de8efc8ef1e0699cd30ef28b5|file:///Users/sophieyou/Desktop/alan/dotfiles/install.sh|1|2|v|sh
+	 installation
+ea09bb364ef1bffd889e76b7a59035fc|file:///Users/sophieyou/Desktop/alan/dotfiles/install.sh|1|3|v|sh
+	installation
+8196d9c1b2a766116bf5ccf6abe0494f|file:///Users/sophieyou/Desktop/alan/dotfiles/install.sh|3|13|v|sh
+	which config do u want to install ? \033[34m1)neovim 2)shell(bash/zsh) 3)kitty 4)tmux \033[37m:
+6b9201d12e46b657f8e9c254d931c4c7|file:///Users/sophieyou/Desktop/alan/dotfiles/install.sh|7|1|V|sh
+			if ! command -v rg &> /dev/null
+			then
+				echo "ripgrep not installed"
+				exit
+c7e1b5b0f58d3ebf80ae351ccfb48dbc|file:///Users/sophieyou/Desktop/alan/dotfiles/install.sh|10|13|v|sh
+	\033[31m ripgrep not installed\033[37m
+bd1bda2ad37e3a78107d8283d2b558e0|file:///Users/sophieyou/Desktop/alan/dotfiles/install.sh|14|1|V|sh
+			if ! command -v g &> /dev/null
+			then
+				echo -e "\033[31msilversearcher not installed\033[37m"
+				exit
+			fi
+c8009a3a647859b2f627a2bd70e37c2b|file:///Users/sophieyou/Desktop/alan/dotfiles/install.sh|14|1|V|sh
+			if ! command -v fzf &> /dev/null
+			then
+				echo -e "\033[31mfuzzyfinder not installed\033[37m"
+				exit
+			fi
+9f16d71bc582a38778416155732abc19|file:///Users/sophieyou/Desktop/alan/dotfiles/install.sh|10|1|V|sh
+			echo "checking dependencies..."
+			#check ripgrep for fzf
+			if ! command -v rg &> /dev/null
+			then
+				echo -e "\033[31mripgrep not installed(fzf.vim)\033[37m"
+				exit
+			fi
+			# check fzf
+			if ! command -v fzf &> /dev/null
+			then
+				echo -e "\033[31mfuzzyfinder not installed(fzf.vim)\033[37m"
+				exit
+			fi
+			if ! command -v node &> /dev/null
+			then
+				echo -e "\033[31mnode not installed(coc.nvim)\033[37m"
+				exit
+			fi
+			if ! command -v git &> /dev/null
+			then
+				echo -e "\033[31mgit not installed\033[37m"
+				exit
+			fi
+	
+	sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+8aa2eeabe1f0cefa0944f30f02c8b668|file:///Users/sophieyou/Desktop/alan/dotfiles/install.sh|10|1|V|sh
+			echo "checking dependencies..."
+			#check ripgrep for fzf
+			if ! command -v rg &> /dev/null
+			then
+				echo -e "\033[31mripgrep not installed(fzf.vim)\033[37m"
+				exit
+			fi
+			# check fzf
+			if ! command -v fzf &> /dev/null
+			then
+				echo -e "\033[31mfuzzyfinder not installed(fzf.vim)\033[37m"
+				exit
+			fi
+			if ! command -v node &> /dev/null
+			then
+				echo -e "\033[31mnode not installed(coc.nvim)\033[37m"
+				exit
+			fi
+			if ! command -v git &> /dev/null
+			then
+				echo -e "\033[31mgit not installed\033[37m"
+				exit
+			fi
+	
+	sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+	       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+e800179e8e03dbaeaf2ea95de1afe80c|file:///Users/sophieyou/Desktop/alan/dotfiles/install.sh|43|46|v|sh
+	\033[34m
+6c566eb3e3ec5687d173356d8a64d634|file:///Users/sophieyou/Desktop/alan/dotfiles/install.sh|46|1|V|sh
+							ln -s $(pwd)/vim_conf ~/.config/nvim
+ea75c2e75ee24babc097ba85c3165422|file:///Users/sophieyou/Desktop/alan/dotfiles/install.sh|36|1|V|sh
+			ln -s $(pwd)/nvim ~/.config/
+			ln -s $(pwd)/coc ~/.config/
+4ebeefddc21c9df3e7c53b1f82d7aae6|file:///Users/sophieyou/Desktop/alan/dotfiles/install.sh|35|1|V|sh
+		if [ -d "~/.config/nvim"]; then
+			echo "nvim directory exists, renaming into nvim_tmp to avoid conflict"
+			mv ~/.config/nvim ~/.config/nvim_tmp
+5bcb4da27ef46ec332443220ee69bb95|file:///Users/sophieyou/Desktop/alan/dotfiles/install.sh|35|1|V|sh
+		if [ -d "~/.config/nvim"]; then
+			echo "nvim directory exists, renaming into nvim_tmp to avoid conflict"
+			mv ~/.config/nvim ~/.config/nvim_tmp
+		fi
+ff2d6292fb5242986db73328065db03b|file:///Users/sophieyou/Desktop/alan/dotfiles/install.sh|24|1|V|sh
+		if ! command -v git &> /dev/null
+		then
+			echo -e "\033[31mgit not installed\033[37m"
+			exit
+		fi
+0f7983efc8dcad56756f8aba6b555eca|file:///Users/sophieyou/Desktop/alan/dotfiles/install.sh|38|1|V|sh
+		#sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+			#https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'

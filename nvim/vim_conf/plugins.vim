@@ -18,7 +18,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'ervandew/supertab'
 Plug 'jiangmiao/auto-pairs'
 Plug 'yuttie/comfortable-motion.vim'
-Plug 'ChristianChiarulli/codi.vim', {'on' : 'Codi'}
+"Plug 'ChristianChiarulli/codi.vim', {'on' : 'Codi'}
 Plug 'vimwiki/vimwiki'
 Plug 'rhysd/clever-f.vim'
 Plug 'airblade/vim-gitgutter'
