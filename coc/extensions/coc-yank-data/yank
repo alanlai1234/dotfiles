@@ -115,3 +115,34 @@ ff2d6292fb5242986db73328065db03b|file:///Users/sophieyou/Desktop/alan/dotfiles/i
 0f7983efc8dcad56756f8aba6b555eca|file:///Users/sophieyou/Desktop/alan/dotfiles/install.sh|38|1|V|sh
 		#sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
 			#https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+304a6344b1ce859531104f81eb041766|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/settings.vim|78|1|V|vim
+	"let $FZF_DEFAULT_OPTS='--color=dark --color=fg:7,bg:-1,hl:1,fg+:#FFFFFF,bg+:0,hl+:1 --color=info:0,prompt:0,pointer:12,marker:4,spinner:11,header:-1 --layout=reverse  --margin=1,4'
+8ee40a910b8f5c60642a680735b731eb|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/settings.vim|78|61|v|vim
+	,fg+:#FFFFFF,bg+:0,hl+:1 
+24233e5f34fbfa5fa5aada43367f2684|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/theme.vim|40|1|V|vim
+		  \ 'separator': {'left': '', 'right': ''},
+531f02f269122f06102453a29f133003|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/theme.vim|27|1|V|vim
+	let g:lightline = {
+		  \ 'colorscheme': 'onedark',
+		  \ 'tabline': {
+		  \   'left': [ ['buffers'] ],
+		  \   'right': [ ['close'] ]
+		  \ },
+		  \ 'enable': {
+		  \   'statusline': 1,
+		  \   'tabline':1
+		  \	},
+		  \ 'active': {
+		  \ 	'left': [ [ 'mode', 'paste',  'coc_errors', 'coc_warnings', 'coc_ok' ], [ 'readonly', 'filename', 'modified' ] ],
+		  \ },
+		  \ 'separator': {'left': '', 'right': ''},
+		  \ 'subseparator': {'left': '\uE0B5', 'right': '\uE0B7'},
+		  \ }
+d3a1c319e996ed2174d9116bb562fa50|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/theme.vim|41|32|v|vim
+	\uE0B5
+a12423ad458dc6d04cc6c9dfba715e9e|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/settings.vim|88|1|V|vim
+	            "\ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+fca876107f32a7469abc051ec8d0d781|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/settings.vim|88|1|V|vim
+				\ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+b0d4998a26f5b5742ad38c4af8817e32|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/settings.vim|94|34|v|vim
+	Exception

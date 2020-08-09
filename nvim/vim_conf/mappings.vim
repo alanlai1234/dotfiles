@@ -24,6 +24,7 @@ nmap <C-g> $
 nmap <silent> <leader>n :bn <CR>
 nmap <silent> <leader>p :bp <CR>
 nmap <silent> <leader>d :bd <CR>
+nnoremap <leader>hh :SignifyHunkDiff<cr>
 
 " vim's native search is annoying, often miss click it
 map n <Nop>
@@ -35,7 +36,6 @@ let exe=expand("%:p:r")
 autocmd Filetype c execute "map <silent> <C-c> :w <CR> :VimuxPromptCommand <CR> cd " . expand("%:p:h") ." && gcc " . file ." -o " . exe ." && " . exe ." <CR>"
 autocmd Filetype python execute "nmap <silent> <C-c>> :w <CR> :VimuxPromptCommand <CR> python " . file ."<CR>"
 autocmd Filetype cpp execute "map <silent> <C-c> :w <CR> :VimuxPromptCommand <CR> cd " . expand("%:p:h") ." && g++ " . file ." -o " . exe ." && " . exe ." <CR>"
-map <leader>hh <Plug>(GitGutterPreviewHunk)
 nmap ; :
 
 " coc-explorer

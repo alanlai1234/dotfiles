@@ -35,9 +35,11 @@ let g:lightline = {
 	  \   'tabline':1
 	  \	},
 	  \ 'active': {
-	  \ 	'left': [ [ 'mode', 'paste',  'coc_errors', 'coc_warnings', 'coc_ok' ], [ 'readonly', 'filename', 'modified' ] ],
+	  \ 	'left': [ [ 'paste',  'coc_errors', 'coc_warnings', 'coc_ok' ], [ 'readonly', 'filename', 'modified' ] ],
+	  \ 	'right': [['lineinfo'], ['percent'], ['filetype']]
 	  \ },
 	  \ 'separator': {'left': '', 'right': ''},
+	  \ 'subseparator': {'left': '\uE0B5', 'right': '\uE0B7'},
 	  \ }
 
 call lightline#coc#register()
