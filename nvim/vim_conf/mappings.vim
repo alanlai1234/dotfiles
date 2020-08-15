@@ -1,11 +1,12 @@
 map <space> <Nop>
+map p P
 let mapleader = ' '
 imap <C-a> <ESC>
 inoremap <C-h> <Left>
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-l> <Right>
-map <silent> <C-t> :TagbarToggle <CR>
+map <silent> <leader>t :Vista finder<CR>
 map <silent> / :BLines <CR>
 ab qq q!
 nnoremap <silent> <F5> :NERDTreeToggle<CR>
@@ -24,9 +25,21 @@ nmap <C-g> $
 nmap <silent> <leader>n :bn <CR>
 nmap <silent> <leader>p :bp <CR>
 nmap <silent> <leader>d :bd <CR>
-nnoremap <leader>hh :SignifyHunkDiff<cr>
+nnoremap <silent> <leader>hh :SignifyHunkDiff<CR>
+nnoremap <silent> <leader>hu :SignifyHunkUndo<CR>
+nnoremap <leader>f :FZF<CR>
 
-" vim's native search is annoying, often miss click it
+" delete but not cut
+nnoremap x "_x
+nnoremap d "_d
+nnoremap D "_D
+vnoremap d "_d
+nnoremap c "_c
+vnoremap c "_c
+nnoremap s "_s
+nnoremap C "_C
+
+"vim's native search is annoying, often miss click it
 map n <Nop>
 map <C-c> <Nop>
 
@@ -39,6 +52,6 @@ autocmd Filetype cpp execute "map <silent> <C-c> :w <CR> :VimuxPromptCommand <CR
 nmap ; :
 
 " coc-explorer
-nmap <silent> <leader>f :CocCommand explorer<CR>
+nmap <silent> <leader>e :CocCommand explorer<CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 

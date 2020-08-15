@@ -1,4 +1,5 @@
 set nocompatible
+set noshowmode
 syntax on
 set mouse=a
 set hidden
@@ -21,14 +22,6 @@ let g:indent_guides_indent_levels = 3
 " switch cursor between modes
 let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]52;CursorShape=2\x7\<Esc>\\"
 let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]53;CursorShape=0\x7\<Esc>\\"
-" delete but not cut
-nnoremap x "_x
-nnoremap d "_d
-nnoremap D "_D
-vnoremap d "_d
-nnoremap c "_c
-vnoremap c "_c
-nnoremap s "_s
 "indent line
 "set list lcs=tab:\|\ 
 "let g:indentLine_char = '|'
@@ -76,19 +69,24 @@ set timeoutlen=1000
 set ttimeoutlen=0
 
 "fzf
-"let $FZF_DEFAULT_OPTS='--color=dark --color=fg:7,bg:-1,hl:1,fg+:#FFFFFF,bg+:0,hl+:1 --color=info:0,prompt:0,pointer:12,marker:4,spinner:11,header:-1 --layout=reverse  --margin=1,4'
-"let $FZF_DEFAULT_OPTS='--color=fg:7,bg:-1,hl:1,fg+:#FFFFFF,bg+:0,hl+:1 --color=info:4,prompt:214,pointer:12,marker:4,spinner:11,header:-1 --layout=reverse  --margin=1,4'
-
-"let g:fzf_layout = { 'window': 'call FloatingFZF()' }
-
-			"\ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+"let g:FZF_DEFAULT_OPTS="--color=dark --color=fg:7,bg:-1,hl:1,fg+:#FFFFFF,bg+:-1,hl+:1 --color=info:0,prompt:0,pointer:12,marker:4,spinner:11,header:-1 --layout=reverse  --margin=1,4"
 let g:fzf_colors = {
-            \ 'hl':      ['fg', 'Comment'],
+			\ 'hl':      ['fg', 'Comment'],
 			\ 'fg+':     ['fg', 15],
-            \ 'bg+':     ['bg', 'Normal'],
-            \ 'hl+':     ['fg', 'Statement'],
-            \ 'prompt':  ['fg', 'Exception']}
+			\ 'bg+':     ['bg', 'Normal'],
+			\ 'hl+':     ['fg', 'Statement'],
+			\ 'prompt':  ['fg', 'Exception'],
+			\ 'info': ['fg', 'Exception']}
 
 autocmd! FileType fzf set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 
+"vista.vim
+function! NearestMethodOrFunction() abort
+  return get(b:, 'vista_nearest_method_or_function', '')
+endfunction
+
+autocmd VimEnter * call vista#RunForNearestMethodOrFunction()
+let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
+let g:vista_fzf_preview = ['right:50%']
+let g:vista#renderer#enable_icon = 1

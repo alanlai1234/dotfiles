@@ -43,7 +43,7 @@ alias vim='nvim'
 set -o vi
 
 # fzf settings
-export FZF_DEFAULT_OPTS="--color=dark --color=fg:7,bg:-1,hl:1,fg+:#FFFFFF,bg+:0,hl+:1 --color=info:0,prompt:0,pointer:12,marker:4,spinner:11,header:-1 --layout=reverse  --margin=1,4"
+export FZF_DEFAULT_OPTS="--color=dark --color=fg:7,bg:-1,hl:1,fg+:#FFFFFF,bg+:-1,hl+:1 --color=info:0,prompt:0,pointer:12,marker:4,spinner:11,header:-1 --layout=reverse  --margin=1,4"
 export FZF_DEFAULT_COMMAND="fd -d 1 -H"
 _fzf_compgen_dir() {
   fd -d 1 -H 

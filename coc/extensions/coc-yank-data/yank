@@ -146,3 +146,32 @@ fca876107f32a7469abc051ec8d0d781|file:///Users/sophieyou/Desktop/alan/dotfiles/n
 				\ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
 b0d4998a26f5b5742ad38c4af8817e32|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/settings.vim|94|34|v|vim
 	Exception
+ebd0c84dd24381b3ac6b3609c4738ec2|file:///Users/sophieyou/.bash_profile|46|1|V|sh
+	export FZF_DEFAULT_OPTS="--color=dark --color=fg:7,bg:-1,hl:1,fg+:#FFFFFF,bg+:-1,hl+:1 --color=info:0,prompt:0,pointer:12,marker:4,spinner:11,header:-1 --layout=reverse  --margin=1,4"
+56d7695ca8704408ad31db87db6e8fec|file:///Users/sophieyou/Desktop/alan/typing_game/main.cpp|3|1|v|cpp
+	FIXME
+d7bc73e33521120784b552c2fc706466|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/settings.vim|24|1|V|vim
+	" delete but not cut
+	nnoremap x "_x
+	nnoremap d "_d
+	nnoremap D "_D
+	vnoremap d "_d
+	nnoremap c "_c
+	vnoremap c "_c
+	nnoremap s "_s
+74697ed3d931f6eede8bf3a8dfeca160|file:///Users/sophieyou/Desktop/alan/typing_game/main.cpp|130|27|v|cpp
+	string text
+7f2afe059511aa109baa6ddaece263e1|file:///Users/sophieyou/Desktop/alan/dotfiles/kitty/kitty.conf|10|1|V|conf
+	 font_family      UbuntuMono Nerd Font Regular
+0cc8ac237b78778319e12584103c8f25|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/theme.vim|38|62|v|vim
+	[ 'readonly', 'filename', 'modified', 'method']
+1554fc211d36f55b1d495650a672b547|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/theme.vim|38|56|v|vim
+	['coc_errors', 'coc_warnings', 'coc_ok']
+bbee4604a54813198a4664b359d8a606|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/theme.vim|43|1|V|vim
+		  "\ 'subseparator': {'left': '\uE0B5', 'right': '\uE0B7'},
+354f047ba64552895b016bbdd60ab174|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/theme.vim|39|19|v|vim
+	percent
+5d23a17b0f4e4a138f942c787d5a33df|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/theme.vim|39|17|v|vim
+	['percent']
+5c63316b13ae06e6aa4805e6a6f0f75c|file:///Users/sophieyou/Desktop/alan/typing_game/main.cpp|130|13|v|cpp
+	WINDOW *

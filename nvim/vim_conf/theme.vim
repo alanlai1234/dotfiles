@@ -35,12 +35,13 @@ let g:lightline = {
 	  \   'tabline':1
 	  \	},
 	  \ 'active': {
-	  \ 	'left': [ [ 'paste',  'coc_errors', 'coc_warnings', 'coc_ok' ], [ 'readonly', 'filename', 'modified' ] ],
-	  \ 	'right': [['lineinfo'], ['percent'], ['filetype']]
+	  \ 	'left': [ ['percent'], [ 'readonly', 'filename', 'modified', 'method']],
+	  \ 	'right': [['coc_errors', 'coc_warnings', 'coc_ok'], ['filetype']]
 	  \ },
-	  \ 'separator': {'left': '', 'right': ''},
-	  \ 'subseparator': {'left': '\uE0B5', 'right': '\uE0B7'},
+	  \ 'component_function': {'method': 'NearestMethodOrFunction'},
+	  \ 'separator': {'left': '', 'right': ''}
 	  \ }
+	  "\ 'subseparator': {'left': '\uE0B5', 'right': '\uE0B7'},
 
 call lightline#coc#register()
 
@@ -52,3 +53,14 @@ hi VimwikiBoldItalic guifg=#8982C9
 "buftabline setting
 let g:buftabline_indicators = 1
 let g:buftabline_separators = 1
+
+" Highlight TODO, FIXME, NOTE, etc.
+if has('autocmd')
+    augroup todo
+        autocmd!
+        autocmd Syntax * call matchadd(
+                    \ 'Debug',
+                    \ '\v\W\zs<(NOTE|INFO|IDEA|TODO|FIXME|CHANGED|XXX|BUG|HACK|TRICKY)>'
+                    \ )
+    augroup END
+endif
