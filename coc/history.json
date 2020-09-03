@@ -33,8 +33,14 @@
     ],
     "%2FUsers%2Fsophieyou": [
       "pyright",
-      "y"
-    ]
+      "y",
+      "sh"
+    ],
+    "%2FUsers%2Fsophieyou%2FLibrary%2FApplication%20Support%2FFirefox%2FProfiles%2F3l21e4wv": {
+      "default-release": [
+        "json"
+      ]
+    }
   },
   "commands": {
     "%2FUsers%2Fsophieyou%2FDesktop%2Falan%2Fscore_sys": [

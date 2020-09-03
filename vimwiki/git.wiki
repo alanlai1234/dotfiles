@@ -1,0 +1,11 @@
+= command =
+	== basic process ==
+		1) ~~gitaddcommit~~(adds and commit together)
+		2) ~~git push~~
+	* online log - ~~gitlog~~
+	* verbose log - ~~git log~~
+	* undo changes - ~~git reset [code on gitlog]
+	* get status - ~~git status~~
+	* git branches - ~~git branch~~
+	* create new branch - ~~git branch [name] (-m [oldname] [newname], -d [branch to delete]{-D to force})~~
+	* switch branch - ~~git checkout [other branch]~~

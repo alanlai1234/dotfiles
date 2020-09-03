@@ -1,0 +1,5 @@
+= environments =
+ - [[vim]]
+ - [[command line]]
+ - [[git]]
+ - [[tmux]]

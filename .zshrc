@@ -260,4 +260,3 @@ vterm_printf(){
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 (( ! ${+functions[p10k]} )) || p10k finalize
-test -e /Users/sophieyou/.iterm2_shell_integration.zsh && source /Users/sophieyou/.iterm2_shell_integration.zsh || true

@@ -1,5 +1,4 @@
 map <space> <Nop>
-map p P
 let mapleader = ' '
 imap <C-a> <ESC>
 inoremap <C-h> <Left>
@@ -9,7 +8,6 @@ inoremap <C-l> <Right>
 map <silent> <leader>t :Vista finder<CR>
 map <silent> / :BLines <CR>
 ab qq q!
-nnoremap <silent> <F5> :NERDTreeToggle<CR>
 let g:SuperTabDefaultCompletionType = "<c-n>"
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 nmap <silent> gd <Plug>(coc-definition)

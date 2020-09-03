@@ -30,5 +30,6 @@ Plug 'ap/vim-buftabline'
 Plug 'wellle/targets.vim'
 Plug 'chaoren/vim-wordmotion'
 Plug 'mhinz/vim-signify'
+set rtp+=~/fzf_browser/vim
 
 call plug#end()

@@ -1,0 +1,5 @@
+= proposal of multithreading in c++ =
+
+* thread.h
+* thread support in ncurses
+* mutex to control threading

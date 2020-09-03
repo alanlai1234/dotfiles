@@ -1,0 +1,14 @@
+= commands =
+	* prefix - ~~C-x~~
+	* show panel number - ~~prefix+q~~
+	* delete panel or tab - ~~C-d/exit~~
+	* attach session - ~~tmuxa [num] (use fzf)~~
+	* kill session - ~~tmuxkill [num]~~
+	* move through panels - ~~C-h/j/k/l~~
+	* resize panel - ~~option-h/j/k/l~~
+	* rename panel - ~~prefix-,~~
+	* move to other window - ~~prefix-p/n~~
+	* create panel - ~~prefix-c~~
+	* save session - ~~prefix-C-s~~
+	* restore session - ~~prefix-C-r~~
+	* tmux spotify - ~~prefix-s~~

@@ -1,0 +1,60 @@
+= commands =
+	== fuzzy finder ==
+	*_there's also a fzf-tmux choice_*
+		1) [command that will return a list of value] | fzf (but doesn't do any thing)
+		# ex - ~~ls | ff~~
+		2) [command that needs a value] $([command that returns] | fzf)
+		   ex - ~~vim $(ls -a | fzf)~~
+		3) [command] **<tab>
+		# ex - ~~cd **<tab>~~
+	== fd ==
+		# ~~fd [FLAGS/OPTIONS] [<pattern>(regular expression)] [<path>...]~~
+		1) find recursively - ~~fd [keyword]~~
+		2) find none recursively - ~~fnd [keyword]~~
+		# execute a command for each search result - ~~-x [command]~~
+	* clean page and back to top - ~~clear~~
+	* stop a program - ~~C-d~~
+	  shut down a program - ~~C-c~~
+	* reload config(with fzf) - ~~sources~~ 
+	* zip file - ~~gzip/gunzip~~
+	== ripgrep ==
+		1) ~~rg [keyword]~~ - search in files recursively
+		2) ~~rg [keyword] [filename]~~
+		3) ~~[command that returns] | rg [keyword]~~
+		4) ~~rg... | [command that gets arguments]~~
+		# ~~-l~~ (shows only the filename), ~~--files-without-match~~ (shows unmatched files)
+	== process ==
+		# get current process code - ~~cur~~
+		# get process(with ripgrep) - ~~ps -l~~
+		# get every process in ram(with ripgrep) - ~~ps aux~~
+		# show dynamic process - ~~top/gtop/htop~~
+		# kill process - ~~kill (-9 to force) [PID](<tab> to use fzf)~~
+		# shut down processes with same name - ~~killall [name]~~
+	* get html from remote - ~~curl [url]~~
+	== dealing with files & text==
+		# return text to a file - ~~[command returns] > [filename]~~(a none exists file)(~~>>~~ to append to existed file)
+		# move returned text to trash - ~~[command] > /dev/null~~
+		# get current dir - ~~pwd~~
+		# move up dir - ~~..~~
+		# rename or move file - ~~mv [old filename or old folder name] [new filename or new folder name]~~
+		# remove file - ~~rm [filename]~~
+		# remove folder - ~~rmd [foldername]~~
+		# copy file - ~~cp [filename] [dir]~~
+		# copy all file in a dir to another dir - ~~cp -r [home dir]/* [destination]~~
+		# view file - ~~bat [filename]~~
+		# cli file manager - mc
+	* clear cmd input - ~~C-u~~
+	* make symlinks - ~~ln -s [source] [destination]~~
+	* show sizes - ~~du (-d [depth])~~
+	== ls (exa) ==
+		1) ~~ls~~
+		2) shows every files and dir - ~~la~~
+		3) shows with tree - ~~ls -laT (does recursive)~~
+	* pipe to clipbroad - [command] | pbcopy
+	* return clipbroad - pbpaste
+	== print ==
+		# print text - ~~echo [blabla]~~
+		# print variable - ~~echo $variable/$(command)~~
+	== logic ==
+		# or (can use for exceptions) - ~~||~~
+		# and - ~~&&~~

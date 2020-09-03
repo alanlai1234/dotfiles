@@ -175,3 +175,562 @@ bbee4604a54813198a4664b359d8a606|file:///Users/sophieyou/Desktop/alan/dotfiles/n
 	['percent']
 5c63316b13ae06e6aa4805e6a6f0f75c|file:///Users/sophieyou/Desktop/alan/typing_game/main.cpp|130|13|v|cpp
 	WINDOW *
+6cacc4df9261d71d0c775f95f12526ed|file:///Users/sophieyou/Desktop/alan/typing_game/makefile|4|1|V|make
+		g++ -std=c++11 -lpanel -lncurses main.cpp -o main
+21e9a0231c7714e88f1dd305857c4799|file:///Users/sophieyou/nav.sh|2|1|V|sh
+	cd ${path} > /dev/null || nvim ${path}
+1c3f5cf7b3c067043246b6233b65211d|file:///Users/sophieyou/nav.sh|11|1|V|sh
+		exec zsh
+93973cc3120c4dc839e322f56a3b1b38|file:///Users/sophieyou/nav.sh|13|1|V|sh
+	nvim ${path}
+2a76be5ff1f5bcd376163f4f639c6c97|file:///Users/sophieyou/Desktop/alan/todo/main.cpp|23|1|V|cpp
+			//if(sqlite3_exec(db, "INSERT INTO todos VALUES (?, 0, )"))
+			cout << "successfully added" << endl;
+3eb96f9dd6d9c9132d86c6c75091f7c1|file:///Users/sophieyou/Desktop/alan/todo/main.cpp|21|23|v|cpp
+	sqlite3 *db
+525714cf18e16fa4be72f28d9db72784|file:///Users/sophieyou/Desktop/alan/todo/main.cpp|23|27|v|cpp
+	"INSERT INTO todos VALUES (?1, ?2, 0, ?3)"
+336c5a5bccc36b91ec563a0e12eec415|file:///Users/sophieyou/Desktop/alan/todo/main.cpp|34|21|v|cpp
+	sqlite3_stmt *
+81f83f0e034239f1c4b3ad6bbaceae33|file:///Users/sophieyou/.bash_profile|48|1|V|sh
+	#export FZF_DEFAULT_OPTS="--color=dark --color=fg:7,bg:-1,hl:1,fg+:12,bg+:-1,hl+:1 --color=info:0,prompt:0,pointer:12,marker:4,spinner:11,header:-1 --layout=reverse  --margin=1,4"
+1b08b78070db6e303080aa278d52b094|file:///Users/sophieyou/.bashrc|1|1|V|sh
+	[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+0af5c4078ed4f2d7c5fae244109043dc|file:///Users/sophieyou/fzf_browser/README.md|54|1|V|vimwiki
+	set rtp+=~/.fzf_browser/vim
+ec146a71f5f9d55fcc9c962cb5c1646b|file:///Users/sophieyou/zsh_widgets.zsh|1|1|v|zsh
+	
+	_fuzzybrowse_zsh_insert_output() {
+	  local args="$@"
+	  local res
+	  () {
+	    fuzzybrowse -o "$1" "$args"
+	    res="$(<$1 tr "\\n" " ")"
+	  } =(:)
+	  zle reset-prompt
+	  if [[ -n "$res" ]]; then
+	    res="$res[0,-2]"
+	    LBUFFER+=" $res"
+	    if [[ -d "$res" ]]; then
+	      LBUFFER+="/"
+	    else
+	      LBUFFER+=" "
+	    fi
+	  fi
+	}
+	
+	zle -N _fuzzybrowse_zsh_insert_output
+418f806bc4cb0f3e53ecb276b80a47d6|file:///Users/sophieyou/fzf_browser/fzf_browser.sh|41|1|V|sh
+	        __fuzzybrowse_show_hidden=1
+0db2525cd3c0d7f28b9d0ba4d3eb365e|file:///Users/sophieyou/Desktop/alan/typing_game/main.cpp|76|14|v|cpp
+	PANEL *
+c2a7fbbfe860b3522feaf129dbbd5780|file:///Users/sophieyou/Desktop/alan/typing_game/main.cpp|128|1|V|cpp
+		//mvwprintw(win, (text.size()/COLS)+1, 0, "wpm : %.2f, errors : %d", 0, ((size_save/5)-errors.size())/(dur.count()/60.000), error);
+54bab55b1e58a328bb9e30edad121d2d|file:///Users/sophieyou/Desktop/alan/typing_game/main.cpp|149|1|V|cpp
+		auto clock_a = async(std::launch::async, clock_win, "countdown", 60, 0, 0);
+275a45941d6bd39a32ff213989401f4f|file:///Users/sophieyou/Desktop/alan/typing_game/main.cpp|38|1|V|cpp
+		//wrefresh(win);
+		PANEL *pan=new_panel(win);
+		update_panels();
+		doupdate();
+	
+		
+		//random_device rd;
+		//int rrand = rd()%;
+		ifstream fp;
+		fp.open("articles/1.txt");
+		
+		// read from file
+		stringstream ss;
+		ss << fp.rdbuf();
+		string text=ss.str();
+		text[text.size()-1]=' ';
+		int ch;
+		int size_save = text.size()-1;
+		vector< pair<int, int> >pos = alignment(text, COLS); // access it when started typing
+	
+		wprintw(win, text.c_str());
+		fp.close();
+	
+		// setting for ready
+		vector< pair<int, int> >::iterator it = pos.begin();
+		vector<int> errors;
+		errors.push_back(11);
+		int spot=0, error=0;
+849fadb0cd8698f3f93e6e8fe6859bad|file:///Users/sophieyou/Desktop/alan/typing_game/side.cpp|125|1|V|cpp
+		vector<int> errors;
+e952de191d35e618f4d5dde8ef033fe7|file:///Users/sophieyou/Desktop/alan/typing_game/side.cpp|101|1|V|cpp
+		PANEL *pan=new_panel(win);
+		update_panels();
+		doupdate();
+	
+99c8b0e47b30ce0aebee7404460c6494|file:///Users/sophieyou/Desktop/alan/typing_game/side.cpp|120|1|V|cpp
+		// setting for ready
+		vector< pair<int, int> >::iterator it = pos.begin();
+ff864c1cbf3522ff523eea64fd1002bf|file:///Users/sophieyou/Desktop/alan/typing_game/side.cpp|115|1|v|cpp
+		vector< pair<int, int> >pos 
+f65b4d8427809df89f6fed2c90da79c4|file:///Users/sophieyou/Desktop/alan/typing_game/main.cpp|115|11|v|cpp
+	(win, (text.size()/COLS)+1, 0, "wpm : %.2f", 0, ((size_save/5)-errors.size())/(dur.count()/60.000))
+7f3ddafe0bf438ef0fa1e031a7efd41c|file:///Users/sophieyou/Desktop/alan/typing_game/main.cpp|115|59|v|cpp
+	((size_save/5)-errors.size())/(dur.count()/60.000)
+cd6f6fa620d65b4c47c5031e741990ea|file:///Users/sophieyou/Desktop/alan/typing_game/main.cpp|113|1|V|cpp
+		mvwprintw(win, (text.size()/COLS)+1, 0, "wpm : %.3f", 0, ((size_save/5)-(float)errors.size())/(float)dur.count());
+49995d99e13d717e7e66b401d0bffd40|file:///Users/sophieyou/Desktop/alan/typing_game/main.cpp|114|59|v|cpp
+	((size_save/5))/(float)dur.count()
+05b8c74cbd96fbf2de4c1a352702fbf4|file:///Users/sophieyou/Desktop/alan/dotfiles/kitty/kitty.conf|852|9|v|conf
+	window
+0cb3610431e707f49896cb7cf3499e57|file:///Users/sophieyou/Desktop/alan/dotfiles/kitty/kitty.conf|852|16|v|conf
+	decorations.
+	
+	 
+cb934d11a8e408f13c62c71f8485ea72|file:///Users/sophieyou/Desktop/alan/dotfiles/kitty/kitty.conf|852|4|v|conf
+	hide_window_decorations
+167af460ac4185fd41c7020c0a2136d6|file:///Users/sophieyou/.p10k.zsh|192|73|v|zsh
+	='☭'
+875905efacbf52dbe803992bc44bb10a|file:///Users/sophieyou/vimwiki/vim.wiki|1|1|V|vimwiki
+	= commands =
+	*_leader is_* " ~~,~~ "
+		* *save every file opened* - ~~:wa~~
+		* *switch buffers* - ~~<leader>b~~
+		* *close a buffer* - ~~:bd~~
+		* *find file* - ~~<leader>f~~
+		* *undo* - ~~:u~~
+		* *redo* - ~~control+r~~
+		== special modes ==
+			# *replace mode* - ~~R~~
+			# *visual mode* - ~~v~~
+			# *line wise visual mode* - ~~V~~
+			# *block wise visual mode* - ~~C-v~~
+		* *print undo log* - ~~:undolist~~
+		* *indent* - ~~[line count]>>/<<~~
+		== Edit keys ==
+			# *delete* - ~~d~~
+			# *copy* - ~~y~~
+			# *delete and insert* - ~~c~~
+			# *delete the char on the cursor* - ~~x~~
+			# *paste text* - ~~p (C-v)~~
+			# *replace character on the cursor* - ~~r[char]~~
+			# *edit the whole line* - ~~dd/yy/cc~~
+			# *[operator] inside [paranthesis, w]*- ~~[operator]i[char]~~
+		== movement keys ==
+			# *simple moves* - ~~[relative_num]hjkl~~
+			# *move to end of the word* - ~~w~~
+			# *end of the word but not include space* - ~~e~~
+			# *move to the end of the line* - ~~$/C-g~~
+			# *move backward a word* - ~~b~~
+			# *start of the line* - ~~0~~
+			# *start of the buffer* - ~~gg~~
+			# goes to [line_num] = ~~[lines_num]gg~~
+			# *to the end of the buffer* - ~~G~~
+			*_all of below can use ";" to move through other searches_*
+			# *forward up to char* _X_ - ~~tX~~
+			# *forward through char* _X_ - ~~fx~~
+			# *backward up to* _X_ - ~~TX~~
+			# *backward through* _X_ - ~~FX~~
+		== other quick movements ==
+			# s [2 chars] (below)
+			# S [2 chars] (above)
+		* *scroll down/up* - ~~C-d/C-b~~
+		* *create new line and enter insert mode* - ~~o~~
+		* *go to the last position of insert* - ~~gi~~
+		* *search buffer* - ~~/~~
+		* *go to the corresponding bracket on cursor* - ~~%~~
+		== replacing text ==  
+			*_those commands can add_* ~~c~~ *_at the end to ask user before replacing_*
+			# *replace [old] in the line to [new]* - ~~:s/[old]/[new]/g~~
+			# *replace [old] in the buffer to [new]* - ~~:%s/[old]/[new]/g~~
+			# *replace [old] from line # ~ # to [new]* - ~~:#,#s/[old]/[new]/g~~
+		* *execute program* - ~~C-c(exprimental)/:make~~
+		* *toggle tagbar* - ~~C-t~~
+		* *faster replacement for ESC* - ~~C-a~~
+		* *comment and uncomment* - ~~[lines beneath]<leader>c<space> ~~
+		* *switch position of split window* - ~~C-w C-r~~
+		* *split buffer window* - ~~(vert) sb [buffer_num]~~
+		* *key binding for save buffer* - ~~<leader>s~~
+		* *go to definition* - ~~gd~~
+		* *gitgutter preview diff* - <leader>hp
+	
+	= configs =
+		~/.vimrc
+f0d0f10aa54c24e1235cbf297b8f0271|file:///Users/sophieyou/vimwiki/vim.wiki|15|1|V|vimwiki
+		* *indent* - ~~[line count]>>/<<~~
+67b97216c7c7720619ce366d82c3d921|file:///Users/sophieyou/vimwiki/vim.wiki|44|5|v|vimwiki
+	go to the corresponding bracket on cursor
+0429ac13866b0dc2550fad79d8f69402|file:///Users/sophieyou/vimwiki/vim.wiki|54|5|v|vimwiki
+	switch position of split window
+5a98935bf8ca4ce393c01551f305f9fd|file:///Users/sophieyou/vimwiki/vim.wiki|12|6|v|vimwiki
+	line wise visual mode
+71b0582895f2c5c79ec15dfdd42cb038|file:///Users/sophieyou/vimwiki/vim.wiki|21|6|v|vimwiki
+	replace character on the cursor
+055a0bc01cf45d1d06e4dbfe54c15e27|file:///Users/sophieyou/vimwiki/vim.wiki|19|6|v|vimwiki
+	delete the char on the cursor
+4a5bb910d22b0f67cd8596c1e47a7e9d|file:///Users/sophieyou/vimwiki/vim.wiki|22|6|v|vimwiki
+	edit the whole line
+8225179ee688e6f5bbdaf3b916a6fa4d|file:///Users/sophieyou/Library/Application%20Support/navi/cheats/mycheat/vim.cheat|137|3|v|conf
+	+d(whole line), +[movement], +i[surround](delete texts In [surround]), +a[surround](delete texts Around [surround])
+2f5c6449c60f9b06724c4743bfe53688|file:///Users/sophieyou/Library/Application%20Support/navi/cheats/mycheat/vim.cheat|140|4|v|conf
+	+y(whole line), +[movement], +i[surround](texts In [surround]), +a[surround](texts Around [surround])
+6050150388a33c8e4d95be28c36457ec|file:///Users/sophieyou/Library/Application%20Support/navi/cheats/mycheat/vim.cheat|144|1|V|conf
+	 c +c(blank the line and insert), +[movement], +i[surround](texts In [surround]), +a[surround](texts Around [surround])
+ab4fc6d808cad1e3e459d43cf076cfc1|file:///Users/sophieyou/Library/Application%20Support/navi/cheats/mycheat/vim.cheat|146|1|V|conf
+	# delete the char on the cursor
+75589642f0cb87c02ac922e88712e675|file:///Users/sophieyou/Library/Application%20Support/navi/cheats/mycheat/vim.cheat|138|3|v|conf
+	delete from the end of the line to the cursor
+21a414c93d345c957f0227977458869b|file:///Users/sophieyou/Library/Application%20Support/navi/cheats/mycheat/vim.cheat|186|1|v|conf
+	[search sequence]
+e7f32adc272aed109abd893f6ea27b26|file:///Users/sophieyou/Library/Application%20Support/navi/cheats/mycheat/vim.cheat|186|21|v|conf
+	('t' to go to next search)
+abf8d1a2d863887dd7e9ee55527e37f2|file:///Users/sophieyou/vimwiki/vim.wiki|47|6|v|vimwiki
+	replace [old] in the line to [new]
+8292ffae9d2213029b838bfb282d250d|file:///Users/sophieyou/vimwiki/vim.wiki|47|1|V|vimwiki
+			# *replace [old] in the line to [new]* - ~~:s/[old]/[new]/g~~
+			# *replace [old] in the buffer to [new]* - ~~:%s/[old]/[new]/g~~
+			# *replace [old] from line # ~ # to [new]* - ~~:#,#s/[old]/[new]/g~~
+ab3908da1eb77a656c6d9bdd4014d427|file:///Users/sophieyou/Library/Application%20Support/navi/cheats/mycheat/cmd.cheat|14|1|V|
+	# find recursively
+	fd <keyword>
+	
+	# find none recursively
+	fnd <keyword>
+8fd38d333c04a440fcd225f21dd3ee4d|file:///Users/sophieyou/vimwiki/vim.wiki|20|47|v|vimwiki
+	~[sequence count][edit key]a[surrounding or w(ord)]
+6f046196a45109e30f30056173537758|file:///Users/sophieyou/vimwiki/vim.wiki|28|1|V|vimwiki
+			# indent - ~~[line count]>>/<<~~
+727e8d09ddd47ef646e4ac7a67e6a4c9|file:///Users/sophieyou/vimwiki/vim.wiki|61|1|V|vimwiki
+		* faster replacement for ESC - ~~C-a~~
+7060a7594709bf1562076c17e5c67469|file:///Users/sophieyou/vimwiki/command%20line.wiki|20|1|V|vimwiki
+			# ~~fd [FLAGS/OPTIONS] [<pattern>(regular expression)] [<path>...]~~
+b5368bbf636b2fcacd1e668a69f9eb6e|file:///Users/sophieyou/vimwiki/command%20line.wiki|28|16|v|vimwiki
+	(with ripgrep)
+2c70f35a4a353954f54ac1c55389ea7e|file:///Users/sophieyou/vimwiki/command%20line.wiki|31|41|v|vimwiki
+	[PID (<tab> to use fzf)]
+7b67e6dfe82cb9ede7af3ae4c86ac319|file:///Users/sophieyou/vimwiki/command%20line.wiki|31|46|v|vimwiki
+	(<tab> to use fzf)
+2a44b19d626b48c8addc0470dc5987df|file:///Users/sophieyou/Desktop/alan/dotfiles/install.sh|57|103|v|sh
+	\033[37m
+1470c8339f7bd64c4a00003c9b048f26|file:///Users/sophieyou/Desktop/alan/typing_game/main.cpp|115|17|v|cpp
+	expression-or-type
+cac0912569f389ed9c5a1784ddce9af3|file:///Users/sophieyou/Desktop/alan/typing_game/main.cpp|113|1|V|cpp
+		mvwprintw(win, (text.size()/COLS)+1, 0, "wpm : %f", ((size_save/5)-errors.size())/(dur.count()/60));
+d479dc6b1b27a48e318a53fbca1ef2b8|file:///Users/sophieyou/Desktop/alan/typing_game/main.cpp|41|1|V|cpp
+		char ch;
+		int spot=0, size_save;
+		vector<int> errors;
+		string text;
+		vector< pair<int, int> >pos;
+		text_init(win, text, size_save, pos);
+	
+		vector< pair<int, int> >::iterator it = pos.begin();
+	
+		// starting countdown
+		clock_win("starting in", 3, 15, 2);
+	
+		// start timing
+		auto START = steady_clock::now();
+	
+		 //start typing
+		while (spot<text.size()-1){
+			ch=wgetch(win);
+			// control+d to stop 
+			if(ch == ctrl('d')){
+				del_panel(pan);
+				delwin(win);
+				return;
+			}
+			if(ch==DELETE){
+				if(spot!=0){
+					mvwaddch(win, spot/COLS, spot%COLS, text[spot]);
+					--spot;
+					// check if it is on a alignment
+					if(spot == (it-1)->first+(it-1)->second-1){
+						--it;
+						spot-=it->second-1;
+					}
+					// check if it is on a error made previously
+					if(errors.back()==spot){
+						errors.pop_back();
+					}
+				}
+				else{
+					continue;
+				}
+			}
+			else{
+				if(ch==text[spot]){
+					mvwaddch(win, spot/COLS, spot%COLS, text[spot] | COLOR_PAIR(green));
+				}
+				else{
+					// acount the errors
+					errors.push_back(spot);
+					if(text[spot] == ' '){
+						mvwaddch(win, spot/COLS, spot%COLS, text[spot] | COLOR_PAIR(bg_red));
+					}
+					else{
+						mvwaddch(win, spot/COLS, spot%COLS, text[spot] | COLOR_PAIR(red));
+					}
+				}
+				// check if the there it is in a alignment
+				if(spot == it->first){
+					spot+=it->second;
+					++it;
+				}
+				else {
+					++spot;
+				}
+			}
+			mvwaddch(win, spot/COLS, spot%COLS, text[spot] | A_UNDERLINE);
+		}
+7b7401af45e8df3300f66a4c7e0ec94f|file:///Users/sophieyou/Library/Application%20Support/Firefox/chrome/userChrome.css|1|1|V|css
+	window,
+	#main-window,
+	#toolbar-menubar,
+	#TabsToolbar,
+	#PersonalToolbar,
+	#navigator-toolbox,
+	#sidebar-box,
+	toolbar {
+	  background-color: #222222 !important;
+	  -moz-appearance: none !important;
+	  background-image: none !important;
+	  border: none !important;
+	}
+	
+	.tab-background[selected="true"] {
+	  background-color: #333333 !important;
+	  -moz-appearance: none !important;
+	  background-image: none !important;
+	  border: none !important;
+	}
+	
+	.tab-background {
+	  border-radius: 20px !important;
+	}
+	
+	.tab-line{
+	  display: none !important;
+	}
+	
+	.tabbrowser-tab::before, 
+	.tabbrowser-tab::after{
+	  display: none !important;
+	}
+	
+	.tab-close-button {
+	  border-radius: 10px !important;
+	}
+	
+	#identity-box,
+	#tracking-protection-icon-container,
+	#urlbar-background{
+	  display: none !important;
+	}
+	
+	#back-button>.toolbarbutton-icon {
+	  transform: scale(.85, .85) !important;
+	  animation: none !important;
+	  border: none !important;
+	  box-shadow: none !important;
+	}
+	
+	#back-button:not(:hover),
+	#back-button:not(:hover) > .toolbarbutton-icon {
+	  background: none !important;
+	}
+	
+	#back-button:hover,
+	#back-button:hover > .toolbarbutton-icon {
+	  border-radius: 2px !important;
+	}
+	
+	#back-button {
+	  list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAADdcAAA3XAUIom3gAAAAHdElNRQfiAxMSNzVLQoGBAAAAb0lEQVQoz43ROQqDUBSF4UMEESKCBBehOODK7ezSWZnGJmuI4xp+66CX9077FXc40k1o+fCSFRoOOgKLa3Z6QosrNt5EFpesDDwtLlgYSSzOmZlILY758SW7ykO+cYzwWNLjTI9HSc5XS86ypP+6Tw/fVEqhFbEZAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTAzLTE5VDE4OjU1OjUzKzAxOjAwq3ccegAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wMy0xOVQxODo1NTo1MyswMTowMNoqpMYAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwaAAAAAElFTkSuQmCC') !important;
+	}
+	
+	#forward-button {
+	  list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAADdcAAA3XAUIom3gAAAAHdElNRQfiAxMSOA3k2CXQAAAAbklEQVQoz5WRMQqDABAEF4UgKEIIPkKJii+3s7NLpY1N3qBR84axsPYOt1sYuNtdSZLEi5FG1yKk5U9tIQ86dioLiejZKC0k5sPK20JSBn4UFvJkYiG3kIwvM8npAt2Vc8J50onpFOVU7Y51PfcBtUFUSir+geUAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMDMtMTlUMTg6NTY6MTMrMDE6MDDECqmDAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTAzLTE5VDE4OjU2OjEzKzAxOjAwtVcRPwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAASUVORK5CYII=') !important;
+	}
+	
+	#whats-new-menu-button,
+	#star-button,
+	#pocket-button,
+	#pageActionSeparator,
+	#pageActionButton,
+	#reader-mode-button{
+	  display: none !important;
+	}
+	
+	#PanelUI-button {
+	  border-image-slice: 0 !important;
+	}
+	
+	#urlbar-results {
+	  background-color: #2d2d2d !important;
+	  border-radius: 10px !important;
+	}
+	
+	.urlbarView-body-inner {
+	  border-top: none !important;
+	}
+	
+	#nav-bar {
+	  border-bottom: 0px !important;
+	  box-shadow: none !important;
+	}
+	
+	#urlbar ::-moz-selection,
+	.searchbar-textbox ::-moz-selection {
+	  background-color: #dddddd !important;
+	  color: #000 !important;
+	}
+	
+	* {
+	    font-family: "Fira Code" !important;
+	    font-size: 12px !important;
+	}
+	
+	#tabbrowser-tabpanels{
+	  background-color: #ffffff !important;
+	}
+5ffc45c7a6127c4ceb331d18ac19ace0|file:///Users/sophieyou/Library/Application%20Support/Firefox/chrome/userChrome.css|2|25|v|css
+	scroll/fixed
+6e36ce5cebff6a3b5a4860be32723014|file:///Users/sophieyou/Desktop/alan/typing_game/clip|1|1|V|conf
+	#window,
+	#main-window,
+	#toolbar-menubar,
+	#TabsToolbar,
+	#PersonalToolbar,
+	#navigator-toolbox,
+	#sidebar-box,
+	toolbar {
+	  background-color: #222222 !important;
+	  -moz-appearance: none !important;
+	  background-image: none !important;
+	  border: none !important;
+	}
+	
+	.tab-background[selected="true"] {
+	  background-color: #333333 !important;
+	  -moz-appearance: none !important;
+	  background-image: none !important;
+	  border: none !important;
+	}
+	
+	.tab-background {
+	  border-radius: 20px !important;
+	}
+	
+	.tab-line{
+	  display: none !important;
+	}
+	
+	.tabbrowser-tab::before, 
+	.tabbrowser-tab::after{
+	  display: none !important;
+	}
+	
+	.tab-close-button {
+	  border-radius: 10px !important;
+	}
+	
+	#identity-box,
+	#tracking-protection-icon-container,
+	#urlbar-background{
+	  display: none !important;
+	}
+	
+	#back-button>.toolbarbutton-icon {
+	  transform: scale(.85, .85) !important;
+	  animation: none !important;
+	  border: none !important;
+	  box-shadow: none !important;
+	}
+	
+	#back-button:not(:hover),
+	#back-button:not(:hover) > .toolbarbutton-icon {
+	  background: none !important;
+	}
+	
+	#back-button:hover,
+	#back-button:hover > .toolbarbutton-icon {
+	  border-radius: 2px !important;
+	}
+	
+	#back-button {
+	  list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAADdcAAA3XAUIom3gAAAAHdElNRQfiAxMSNzVLQoGBAAAAb0lEQVQoz43ROQqDUBSF4UMEESKCBBehOODK7ezSWZnGJmuI4xp+66CX9077FXc40k1o+fCSFRoOOgKLa3Z6QosrNt5EFpesDDwtLlgYSSzOmZlILY758SW7ykO+cYzwWNLjTI9HSc5XS86ypP+6Tw/fVEqhFbEZAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTAzLTE5VDE4OjU1OjUzKzAxOjAwq3ccegAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wMy0xOVQxODo1NTo1MyswMTowMNoqpMYAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwaAAAAAElFTkSuQmCC') !important;
+	}
+	
+	#forward-button {
+	  list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAADdcAAA3XAUIom3gAAAAHdElNRQfiAxMSOA3k2CXQAAAAbklEQVQoz5WRMQqDABAEF4UgKEIIPkKJii+3s7NLpY1N3qBR84axsPYOt1sYuNtdSZLEi5FG1yKk5U9tIQ86dioLiejZKC0k5sPK20JSBn4UFvJkYiG3kIwvM8npAt2Vc8J50onpFOVU7Y51PfcBtUFUSir+geUAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMDMtMTlUMTg6NTY6MTMrMDE6MDDECqmDAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTAzLTE5VDE4OjU2OjEzKzAxOjAwtVcRPwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAASUVORK5CYII=') !important;
+	}
+	
+	#whats-new-menu-button,
+	#star-button,
+	#pocket-button,
+	#pageActionSeparator,
+	#pageActionButton,
+	#reader-mode-button{
+	  display: none !important;
+	}
+	
+	#PanelUI-button {
+	  border-image-slice: 0 !important;
+	}
+	
+	#urlbar-results {
+	  background-color: #2d2d2d !important;
+	  border-radius: 10px !important;
+	}
+	
+	.urlbarView-body-inner {
+	  border-top: none !important;
+	}
+	
+	#nav-bar {
+	  border-bottom: 0px !important;
+	  box-shadow: none !important;
+	}
+	
+	#urlbar ::-moz-selection,
+	.searchbar-textbox ::-moz-selection {
+	  background-color: #dddddd !important;
+	  color: #000 !important;
+	}
+	
+	* {
+	    font-family: "Fira Code" !important;
+	    font-size: 12px !important;
+	}
+	
+	#tabbrowser-tabpanels{
+	  background-color: #ffffff !important;
+	}
+1bf306e7f1d47b08ae106117bde5809a|file:///Users/sophieyou/Library/Application%20Support/Firefox/Profiles/3l21e4wv.default-release/chrome/patches/tabs-custom.css|82|42|v|css
+	263238
+bde5e961f8772b82c6813a44631ad4ac|file:///Users/sophieyou/Library/Application%20Support/Firefox/Profiles/3l21e4wv.default-release/chrome/patches/nav-bar-custom.css|14|21|v|css
+	222D32 
+44037a4e25ab916d4d5b93e65164ed28|file:///Users/sophieyou/Library/Application%20Support/Firefox/Profiles/3l21e4wv.default-release/chrome/patches/tabs-custom.css|82|42|v|css
+	252936
+7a99cb2cf3a44710aadb982d180c5e6f|file:///Users/sophieyou/Library/Application%20Support/Firefox/Profiles/3l21e4wv.default-release/chrome/patches/tabs-custom.css|12|29|v|css
+	b89451
+2f0c62a696df2327d8c900190c233032|file:///Users/sophieyou/Library/Application%20Support/Firefox/Profiles/ashncn77.default-release-1598620614794/chrome/userChrome.css|112|1|V|css
+	  background-color: rgba(255,255,255,0.1) !important;
+7d671a6c2f4f30b4ea6eca859337747f|file:///Users/sophieyou/Library/Application%20Support/Firefox/Profiles/ashncn77.default-release-1598620614794/chrome/userChrome.css|2|15|v|css
+	#27282
+bfbce8657f7016827b5adcbff05a45db|file:///Users/sophieyou/Library/Application%20Support/Firefox/Profiles/ashncn77.default-release-1598620614794/chrome/userChrome.css|2|15|v|css
+	#27282e 
+7fef2b75b4e3192c9249e0c6d9fd37fa|file:///Users/sophieyou/Desktop/alan/typing_game/main.cpp|113|1|V|cpp
+		wgetch(win);
+		del_panel(pan);
+		delwin(win);
+ef1c89607e231a45ca824ec1cea4107a|file:///Users/sophieyou/Desktop/alan/typing_game/main.cpp|113|56|v|cpp
+	(float)((size_save/5)-errors.size())/((float)dur.count()/60.00))
+3dc44d2a27ef0447e4a100f175e9169a|file:///Users/sophieyou/Desktop/alan/typing_game/main.cpp|114|14|v|cpp
+	int point
+3669db0e137de81254a670d99b46aa31|file:///Users/sophieyou/Library/Application%20Support/Firefox/Profiles/ashncn77.default-release-1598620614794/chrome/userChrome.css|104|1|V|css
+	  /*background-color: rgba(255,255,255,0.1) !important;*/
+ef855e76027c5d07d322eb064a17eebb|file:///Users/sophieyou/Library/Application%20Support/Firefox/Profiles/ashncn77.default-release-1598620614794/chrome/userChrome.css|2|16|v|css
+	27282e 
+4b68fd04d60e5cd689d60e2338907ce1|file:///Users/sophieyou/Library/Application%20Support/Firefox/Profiles/ashncn77.default-release-1598620614794/chrome/userChrome.css|108|1|V|css
+	  background-color: rgba(0,0,0,0.1) !important;
+4c1e900cb431df775ab829e7bf5fcff0|file:///Users/sophieyou/Library/Application%20Support/Firefox/Profiles/ashncn77.default-release-1598620614794/chrome/userChrome.css|94|1|V|css
+	  background-color: rgba(255,255,255,0) !important;

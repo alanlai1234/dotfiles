@@ -1,0 +1,77 @@
+= commands =
+*_leader is_* " ~~,~~ "
+	* force quiting - ~~:qq~~
+	* binding for save - ~~<leader>s~~
+	* save every file opened - ~~:wa~~
+	* switch buffers - ~~<leader>b~~
+	* close a buffer - ~~:bd(!)~~
+	* find file with fzf- ~~<leader>f~~
+	* file explorer - ~~<leader>e~~
+	* undo - ~~:u~~
+	* redo - ~~control+r~~
+	== special modes ==
+		# faster replacement for ESC - ~~C-a~~
+		# insert mode - ~~i/a(ppend)~~
+		# replace mode - ~~R~~
+		# visual mode - ~~v~~
+		# line wise visual mode - ~~V~~
+		# block wise visual mode - ~~C-v~~
+	* print undo log - ~~:undolist~~
+	== Edit keys ==
+		=== formula ===
+			1) make effect on the whole one - ~~[line count][edit key][edit key]~~
+			2) with movements key - ~~[count][edit key][movement key]~~
+			3) make effect *Around* the surrounding - ~~[sequence count][edit key]a[surrounding or w(ord)]~~
+			4) make effect *Inside* the surrounding - ~~[sequence count][edit key]i[surrounding or w(ord)]~~
+		# delete - ~~d~~
+		# copy - ~~y~~
+		# delete and insert - ~~c~~
+		# indent - ~~[line count]>>/<<~~
+		
+		*_below doesn't apply to the formula_*
+		# delete the char on the cursor - ~~x~~
+		# paste text - ~~p(forward)/P(backward) (C-v)~~
+		# replace character on the cursor - ~~r[char]~~
+	== movement keys ==
+		# simple moves - ~~[relative_num]hjkl~~
+		# move to end of the word - ~~w~~
+		# end of the word but not include space - ~~e~~
+		# move to the end of the line - ~~$/C-g~~
+		# move backward a word - ~~b~~
+		# start of the line - ~~0~~
+		# start of the buffer - ~~gg~~
+		# goes to [line_num] = ~~[lines_num]gg~~
+		# to the end of the buffer - ~~G~~
+		# paragraphs - ~~{(up) / }(down)~~
+		# forward up to char* _X - ~~tX~~ (t for next search)
+		# forward through char* _X - ~~fx~~
+		# backward up to* _X - ~~TX~~
+		# backward through* _X - ~~FX~~
+	* scroll down/up - ~~C-d/C-b~~
+	* create new line and enter insert mode - ~~o~~
+	* go to the last position of insert - ~~gi~~
+	* search buffer - ~~/~~
+	* go to the corresponding bracket on cursor - ~~%~~
+	== replacing text ==  
+		*_those commands can add_* ~~c~~ *_at the end to ask user before replacing_*
+		# replace [old] in the line to [new] - ~~:s/[old]/[new]/g~~
+		# replace [old] in the buffer to [new] - ~~:%s/[old]/[new]/g~~
+		# replace [old] from line # ~ # to [new] - ~~:#,#s/[old]/[new]/g~~
+	* execute program - ~~C-c(exprimental)/:make~~
+	* toggle tags - ~~<leader>t~~
+	* comment and uncomment - ~~[lines beneath]<leader>c<space> ~~
+	* switch position of split window - ~~C-w C-r~~
+	* split buffer window - ~~(vert) sb [buffer_num]~~
+	* key binding for save buffer - ~~<leader>s~~
+	* go to definition - ~~gd~~
+	* go to file - ~~gf~~
+	* go to reference - ~~gr~~
+	* preview git diff - ~~<leader>hh~~
+	* undo git diff - ~~<leader>hu~~
+	== windows ==
+		# next window - ~~<leader>n~~
+		# previous window - ~~<leader>p~~
+		# delete window - ~~<leader>d~~
+
+= configs =
+	$vimrc (it'll show a list of config file)

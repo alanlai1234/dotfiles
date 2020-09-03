@@ -19,9 +19,6 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_guide_size = 1
 let g:indent_guides_indent_levels = 3
-" switch cursor between modes
-let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]52;CursorShape=2\x7\<Esc>\\"
-let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]53;CursorShape=0\x7\<Esc>\\"
 "indent line
 "set list lcs=tab:\|\ 
 "let g:indentLine_char = '|'
@@ -90,3 +87,6 @@ autocmd VimEnter * call vista#RunForNearestMethodOrFunction()
 let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
 let g:vista_fzf_preview = ['right:50%']
 let g:vista#renderer#enable_icon = 1
+
+" sava when exit insert mode
+autocmd InsertLeave * write

@@ -35,7 +35,7 @@ let g:lightline = {
 	  \   'tabline':1
 	  \	},
 	  \ 'active': {
-	  \ 	'left': [ ['percent'], [ 'readonly', 'filename', 'modified', 'method']],
+	  \ 	'left': [ ['percent'], [ 'readonly', 'filename', 'modified'], ['method']],
 	  \ 	'right': [['coc_errors', 'coc_warnings', 'coc_ok'], ['filetype']]
 	  \ },
 	  \ 'component_function': {'method': 'NearestMethodOrFunction'},
