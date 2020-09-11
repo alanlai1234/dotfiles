@@ -6,8 +6,7 @@ if (has("autocmd"))
     autocmd!
     autocmd ColorScheme * call onedark#extend_highlight("Normal", { "bg": { "gui": "#1e2127" } })
 	"autocmd ColorScheme * call onedark#extend_highlight("Pmenu", { "bg": { "gui": "#21252B" } } )
-	"autocmd ColorScheme * call onedark#extend_highlight("PmenuSel", { "bg": { "gui": "#767F98" } } )
-	autocmd ColorScheme * call onedark#extend_highlight("CursorLineNr", { "bg": { "gui": "#2D323B" }, "gui": "bold" } )
+	autocmd ColorScheme * call onedark#extend_highlight("PmenuSel", { "bg": { "gui": "#767F98" } } )
   augroup END
 endif
 colorscheme onedark
@@ -22,45 +21,7 @@ if (has("nvim"))
     set termguicolors
 endif
 
-" lightline and bufferline
-set showtabline=2
-let g:lightline = {
-	  \ 'colorscheme': 'onedark',
-	  \ 'tabline': {
-	  \   'left': [ ['buffers'] ],
-	  \   'right': [ ['close'] ]
-	  \ },
-	  \ 'enable': {
-	  \   'statusline': 1,
-	  \   'tabline':1
-	  \	},
-	  \ 'active': {
-	  \ 	'left': [ ['percent'], [ 'readonly', 'filename', 'modified'], ['method']],
-	  \ 	'right': [['coc_errors', 'coc_warnings', 'coc_ok'], ['filetype']]
-	  \ },
-	  \ 'component_function': {'method': 'NearestMethodOrFunction'},
-	  \ 'separator': {'left': '', 'right': ''}
-	  \ }
-	  "\ 'subseparator': {'left': '\uE0B5', 'right': '\uE0B7'},
-
-call lightline#coc#register()
-
 " vimwiki syntax highlights
 hi VimwikiLink guifg=#98D4F2 gui=underline
 hi VimwikiHeader2 guifg=orange 
 hi VimwikiBoldItalic guifg=#8982C9
-
-"buftabline setting
-let g:buftabline_indicators = 1
-let g:buftabline_separators = 1
-
-" Highlight TODO, FIXME, NOTE, etc.
-if has('autocmd')
-    augroup todo
-        autocmd!
-        autocmd Syntax * call matchadd(
-                    \ 'Debug',
-                    \ '\v\W\zs<(NOTE|INFO|IDEA|TODO|FIXME|CHANGED|XXX|BUG|HACK|TRICKY)>'
-                    \ )
-    augroup END
-endif

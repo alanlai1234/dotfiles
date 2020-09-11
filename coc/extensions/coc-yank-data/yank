@@ -734,3 +734,35 @@ ef855e76027c5d07d322eb064a17eebb|file:///Users/sophieyou/Library/Application%20S
 	  background-color: rgba(0,0,0,0.1) !important;
 4c1e900cb431df775ab829e7bf5fcff0|file:///Users/sophieyou/Library/Application%20Support/Firefox/Profiles/ashncn77.default-release-1598620614794/chrome/userChrome.css|94|1|V|css
 	  background-color: rgba(255,255,255,0) !important;
+22ed65600b249af440da6a6118c604db|file:///Users/sophieyou/Desktop/alan/typing_game/main.cpp|55|1|V|cpp
+		WINDOW *win=newwin(LINES, COLS, 2, 0);
+		refresh();
+		touchwin(win);
+8eab96bb865230b5c23afa50d0c7944e|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/theme.vim|7|85|v|vim
+	#1e2127
+129d592bc4f256c63192926afb771ee3|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/statusline.vim|9|5|v|vim
+	set statusline
+d4fd339ed7cef68e081c2161ad901892|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/statusline.vim|10|1|V|vim
+	    set statusline+=%1*
+413cee55e8544ba49cf47d716bb064b7|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/statusline.vim|34|1|V|vim
+	set statusline+=\
+b9da62a77fbf1e74fe189d870ad8f2da|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/statusline.vim|37|1|V|vim
+	set statusline+=
+0bcf1356078063cafc925f8ade8a22a7|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/statusline.vim|36|1|V|vim
+	set statusline+=%2*
+460dd1a718f837f2c01ed264b5da8bf0|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/statusline.vim|20|1|V|vim
+	set statusline+=%#NormalColor#%{(mode()=='n')?'\ \ NORMAL\ ':''}
+	set statusline+=%#InsertColor#%{(mode()=='i')?'\ \ INSERT\ ':''}
+	set statusline+=%#ReplaceColor#%{(mode()=='R')?'\ \ REPLACE\ ':''}
+9a9866457336d11c6b8aaa59bb3a2b09|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/statusline.vim|20|1|V|vim
+	set statusline+=%#NormalColor#%{(mode()=='n')?'\ \ NORMAL\ ':''}
+	set statusline+=%#InsertColor#%{(mode()=='i')?'\ \ INSERT\ ':''}
+	set statusline+=%#ReplaceColor#%{(mode()=='R')?'\ \ REPLACE\ ':''}
+	set statusline+=%#VisualColor#%{(mode()=='v')?'\ \ VISUAL\ ':''}
+10609899ff29981a5c70b1916eb9f36d|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/statusline.vim|4|22|v|vim
+	#db9b32
+4b0433f7f04dbff8a34baf53488e10c8|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/statusline.vim|22|1|V|vim
+	set statusline+=%#roundnormal#%{(mode()=='n')?'':''}
+	set statusline+=%#roundinsert#%{(mode()=='i')?'':''}
+	set statusline+=%#roundreplace#%{(mode()=='R')?'':''}
+	set statusline+=%#roundvisual#%{(mode()=='v')?'':''}

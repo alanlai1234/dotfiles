@@ -6,7 +6,6 @@ call plug#begin('~/.vim/plugged')
 " Plugins go here
 Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
-Plug 'itchyny/lightline.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'preservim/nerdcommenter'
 Plug 'benmills/vimux'
@@ -23,13 +22,9 @@ Plug 'vimwiki/vimwiki'
 Plug 'rhysd/clever-f.vim'
 Plug 'honza/vim-snippets'
 Plug 'thaerkh/vim-workspace'
-Plug 'mengelbrecht/lightline-bufferline'
-Plug 'josa42/vim-lightline-coc'
-Plug 'tpope/vim-dadbod'
-Plug 'ap/vim-buftabline'
+"Plug 'tpope/vim-dadbod'
 Plug 'wellle/targets.vim'
 Plug 'chaoren/vim-wordmotion'
 Plug 'mhinz/vim-signify'
-set rtp+=~/fzf_browser/vim
 
 call plug#end()
