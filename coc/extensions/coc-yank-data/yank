@@ -766,3 +766,21 @@ b9da62a77fbf1e74fe189d870ad8f2da|file:///Users/sophieyou/Desktop/alan/dotfiles/n
 	set statusline+=%#roundinsert#%{(mode()=='i')?'':''}
 	set statusline+=%#roundreplace#%{(mode()=='R')?'':''}
 	set statusline+=%#roundvisual#%{(mode()=='v')?'':''}
+7ad828223c6990936ca1b0724087ad8d|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/statusline.vim|44|1|V|vim
+	set statusline+=%#Normal#
+d210ead9a6b28cc3fb28b7424f94699f|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/statusline.vim|13|18|v|vim
+	3c8aab 
+e33ae1111b55ca877b9139ac1c7f8b98|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/statusline.vim|44|1|V|vim
+	set statusline+=%#icon#%{WebDevIconsGetFileTypeSymbol()}
+64850327822f767c7c1eed3514f6bd21|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/statusline.vim|42|1|V|vim
+	set statusline+=%#global#
+463b6a1984eff4638e3fcf56ba608241|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/statusline.vim|25|1|V|vim
+	    return ' '
+0e9eb27236b4a78787432981f099dd3a|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/statusline.vim|44|1|V|vim
+	  hi diag guifg=#d3c7a0
+429b57a0b076b4cb5afe411076054fb6|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/statusline.vim|74|1|V|vim
+	set statusline+=%#icon#%{WebDevIconsGetFileTypeSymbol()}\ \ 
+15973c81acf33428c822f77bd7b38423|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/statusline.vim|63|1|V|vim
+	set statusline+=%#VisualColor#%{(mode()=='v')?'\ <V>':''}
+59724092cf5c042d73caff01fd0b5725|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/statusline.vim|73|1|V|vim
+	set statusline+=%#stbg#

@@ -13,7 +13,6 @@ Plug 'liuchengxu/vista.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'Yggdroot/indentLine'
 Plug 'ervandew/supertab'
 Plug 'jiangmiao/auto-pairs'
 Plug 'yuttie/comfortable-motion.vim'
@@ -26,5 +25,6 @@ Plug 'thaerkh/vim-workspace'
 Plug 'wellle/targets.vim'
 Plug 'chaoren/vim-wordmotion'
 Plug 'mhinz/vim-signify'
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
