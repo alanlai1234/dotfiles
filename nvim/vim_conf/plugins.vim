@@ -6,6 +6,7 @@ call plug#begin('~/.vim/plugged')
 " Plugins go here
 Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
+Plug 'morhetz/gruvbox'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'preservim/nerdcommenter'
 Plug 'benmills/vimux'
@@ -26,5 +27,6 @@ Plug 'wellle/targets.vim'
 Plug 'chaoren/vim-wordmotion'
 Plug 'mhinz/vim-signify'
 Plug 'ryanoasis/vim-devicons'
+Plug 'ap/vim-buftabline'
 
 call plug#end()

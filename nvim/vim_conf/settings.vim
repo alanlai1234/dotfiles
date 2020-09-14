@@ -46,7 +46,7 @@ let g:fzf_colors = {
 			\ 'info': ['fg', 'Exception']}
 
 autocmd! FileType fzf set laststatus=0 noshowmode noruler
-  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+  \| autocmd BufLeave <buffer> set laststatus=2 ruler
 
 "vista.vim
 function! NearestMethodOrFunction() abort

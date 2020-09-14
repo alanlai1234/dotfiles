@@ -784,3 +784,77 @@ e33ae1111b55ca877b9139ac1c7f8b98|file:///Users/sophieyou/Desktop/alan/dotfiles/n
 	set statusline+=%#VisualColor#%{(mode()=='v')?'\ <V>':''}
 59724092cf5c042d73caff01fd0b5725|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/statusline.vim|73|1|V|vim
 	set statusline+=%#stbg#
+ddff18298bfa67995559a99721e0f7df|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/statusline.vim|62|1|V|vim
+	set statusline+=%#CommandColor#%{(mode()=='c')?'\ <C>':''}
+29858d123361a5164c1b7f8342353a78|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/statusline.vim|63|1|V|vim
+	set statusline+=%#CommandColor#%{(mode()=="V")?'\ <V-L>':''}
+5cab6c684f89e5984b486f5d11a03a5c|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/statusline.vim|47|1|V|vim
+	    hi diag guifg=#8acf72
+b246b0214d603a9c3cddc676ed7a7996|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/statusline.vim|49|10|v|vim
+	join(msgs, ' ') == '' 
+6b9a849bf3c730a622c3c575c5312d30|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/statusline.vim|50|1|V|vim
+	  return join(msgs, ' ') == '' ? ' ' : join(msgs, ' ')
+7f81d86e693615171a5e2fa6ed0daa9e|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/statusline.vim|50|43|v|vim
+	join(msgs, ' ')
+ce9df039cfc2e269056b5d0598fe6c37|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/statusline.vim|27|1|V|vim
+	function! CocDiagnostic() abort
+	  if (winwidth(0) < 40)
+	    return ''
+	  endif
+	  let info = get(b:, 'coc_diagnostic_info', {})
+	  if empty(info) | return ' ' | endif 
+	  " if empty(info) | return '' | endif 
+	  let msgs = []
+	  if get(info, 'error', 0)
+	    hi diag guifg=#e85635
+	    call add(msgs, ' ' . info['error'])
+	  endif
+	  if get(info, 'warning', 0)
+	    hi diag guifg=#d17a32
+	    call add(msgs, ' ' . info['warning'])
+	  endif
+	
+	  if(join(msgs, ' ') == '' )
+	    return ' '
+	  else
+	    return join(msgs, ' ')
+	  endif
+	  "return join(msgs, ' ') == '' ? ' ' : join(msgs, ' ')
+	endfunction
+9f3ab06e04dedb4e891c3e360389176b|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/statusline.vim|28|1|V|vim
+	function! Error() abort
+	  if (winwidth(0) < 40)
+	    return ''
+	  endif
+	  let info = get(b:, 'coc_diagnostic_info', {})
+	  let msgs = []
+	
+	  if get(info, 'error', 0)
+	    hi error guifg=#e85635
+	    call add(msgs, ' ' . info['error'])
+	  endif
+	
+	  if(join(msgs, ' ') == '' )
+	    return ''
+	  else
+	    return join(msgs, ' ')
+	  endif
+	endfunction
+52dd0836c598ff1c1036c4b1121c7d71|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/statusline.vim|79|1|V|vim
+	    "hi diag guifg=#d17a32
+	    "call add(msgs, ' ' . info['warning'])
+551242040fc26abdbf4702ed15ac7262|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/statusline.vim|55|5|v|vim
+	hi warn guifg=#e85635
+	    call add(msgs, ' ' . info['warning'])    "hi diag guifg=#d17a32
+	    "call add(msgs, ' ' . info['warning'])
+	
+	
+3bbc058896fa52f580babee5d1233eba|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/statusline.vim|75|1|V|vim
+	    "hi diag guifg=#e85635
+	    "call add(msgs, ' ' . info['error'])
+334855c09df06098db9c618d6a7d9a49|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/statusline.vim|54|1|V|vim
+	    hi warn guifg=#d17a32
+c86246b9af7bbff85d7995e612e5d987|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/statusline.vim|35|1|V|vim
+	    hi error guifg=#e85635
+f02644e7dac4938a9d76584760ff4a89|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/statusline.vim|21|19|v|vim
+	guifg=#cf6848
