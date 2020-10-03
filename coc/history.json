@@ -40,7 +40,10 @@
       "default-release": [
         "json"
       ]
-    }
+    },
+    "%2FUsers%2Fsophieyou%2FDesktop": [
+      "write"
+    ]
   },
   "commands": {
     "%2FUsers%2Fsophieyou%2FDesktop%2Falan%2Fscore_sys": [
@@ -60,7 +63,10 @@
       "config%2Fnvim": [
         "ex"
       ]
-    }
+    },
+    "%2FUsers%2Fsophieyou": [
+      "yan"
+    ]
   },
   "explorerActions": {
     "%2FUsers%2Fsophieyou": [

@@ -1,4 +1,5 @@
 explorer
+yank.clean
 snippets.editSnippets
 python.createTerminal
 python.setLinter

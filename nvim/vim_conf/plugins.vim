@@ -6,7 +6,8 @@ call plug#begin('~/.vim/plugged')
 " Plugins go here
 Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
-Plug 'morhetz/gruvbox'
+Plug 'lifepillar/vim-solarized8'
+Plug 'sainnhe/sonokai'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'preservim/nerdcommenter'
 Plug 'benmills/vimux'
@@ -28,5 +29,8 @@ Plug 'chaoren/vim-wordmotion'
 Plug 'mhinz/vim-signify'
 Plug 'ryanoasis/vim-devicons'
 Plug 'ap/vim-buftabline'
+"Plug 'narajaon/onestatus'
+"Plug 'nvim-treesitter/nvim-treesitter'
 
 call plug#end()
+colorscheme solarized8

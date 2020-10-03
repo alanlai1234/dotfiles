@@ -1,16 +1,13 @@
 set laststatus=2
 
 " color presets
-hi NormalColor guifg=#db9b32 
-hi InsertColor guifg=lightgreen 
+hi NormalColor guifg=#db9b32
+hi InsertColor guifg=#79b389 
 hi ReplaceColor guifg=#32abdb 
 hi VisualColor guifg=#a78acf 
 hi CommandColor guifg=#88b9c2
-hi LineColor guifg=#
-hi global guifg=#d3c7a0
-hi icon guifg=LightBlue
-hi modify guifg=#cf6848
-hi error guifg=#e85635
+hi LineColor guifg=#659666
+hi err guifg=#e85635
 hi warn guifg=#d17a32
 hi good guifg=#8acf72
 
@@ -101,15 +98,19 @@ set statusline+=%#Normal#
 
 " filename
 set statusline+=\ \ \ 
-set statusline+=%#icon#%{WebDevIconsGetFileTypeSymbol()}\ \ 
+set statusline+=%#roundfg#
+set statusline+=%#icon#\ %{WebDevIconsGetFileTypeSymbol()}\ \ 
 set statusline+=%#global#
 set statusline+=%t\ %#modify#%{SetModifiedSymbol(&modified)}
+set statusline+=%#roundfg#
 
 "right
 " coc diagnostic
 set statusline+=%=
-set statusline+=%#good#%{Good()}%#error#%{Error()}\ %#warn#%{Warning()}\ \ 
+set statusline+=%#good#%{Good()}%#err#%{Error()}\ %#warn#%{Warning()}\ \ 
 
+set statusline+=%#roundfg#
 set statusline+=%#global#%l
 set statusline+=/ 
-set statusline+=%L\ \ 
+set statusline+=%L
+set statusline+=%#roundfg#\ \ 

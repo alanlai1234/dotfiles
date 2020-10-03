@@ -9,7 +9,7 @@ set encoding=utf-8
 set clipboard=unnamed
 set nocursorline
 set number relativenumber
-set tabstop=6
+set tabstop=4
 set shiftwidth=4
 set updatetime=100
 " fold settings
@@ -58,3 +58,10 @@ let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
 let g:vista_fzf_preview = ['right:50%']
 let g:vista#renderer#enable_icon = 1
 
+"nvim treesitter
+"lua <<EOF
+"require'nvim-treesitter.configs'.setup {
+    "-- Modules and its options go here
+    "highlight = { enable = true },
+"}
+"EOF
