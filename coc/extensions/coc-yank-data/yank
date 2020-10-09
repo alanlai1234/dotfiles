@@ -118,3 +118,150 @@ ebd3c8af211adb864aa914b846a3bccf|file:///Users/sophieyou/Desktop/alan/dotfiles/n
 	c8cdde
 d2d408d2b5ee47fa922d114dab99f4a9|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/theme.vim|46|1|V|vim
 		hi PmenuSel guibg=#747a8c guifg=#c8cdde
+3b5d5f56ef9fbd1e0e275ee37562b3ff|file:///Users/sophieyou/Desktop/alan/dotfiles/nvim/vim_conf/theme.vim|62|21|v|vim
+	e8dcb6
+95466ddc8741412dd79350d2478504b4|file:///Users/sophieyou/Desktop/alan/typing_game/main.cpp|164|51|v|cpp
+	"countdown", 10, 0, LINES/2
+099fb995346f31c749f6e40db0f395e3|file:///Users/sophieyou/Desktop/alan/typing_game/side.cpp|12|11|v|cpp
+	header
+29f7d98f736ac391242d855f3096c0e0|file:///Users/sophieyou/Desktop/alan/typing_game/side.cpp|93|1|V|cpp
+	
+	void clock_win(string text, int count, int x, int y){
+		refresh();
+		WINDOW *c_win=newwin(3,30, y, x);
+		PANEL *c_pan=new_panel(c_win);
+		update_panels();
+		doupdate();
+		wattron(c_win, COLOR_PAIR(yellow));
+		box(c_win, 0, 0);
+		mvwprintw(c_win,0, 2, text.c_str());
+		wrefresh(c_win);
+		for (int i=count;i>=0;--i){
+			mvwprintw(c_win, 1,1, "%d   ", i);
+			this_thread::sleep_for(seconds(1));
+			wrefresh(c_win);
+		}
+		wattroff(c_win, COLOR_PAIR(yellow));
+		hide_panel(c_pan);
+		del_panel(c_pan);
+		delwin(c_win);
+		refresh();
+	}
+0ebe0c2211bfb930c4b750dd97a05803|file:///Users/sophieyou/Desktop/alan/typing_game/side.cpp|116|17|v|cpp
+	string text, int count, int x, int y
+d84d2e17b37bb0f50186e1c3e2e4b4e0|file:///Users/sophieyou/Desktop/alan/typing_game/side.cpp|172|11|v|cpp
+	string t, int c, int a, int b
+0ebf22c18383944a70777aa2a84d0119|file:///Users/sophieyou/Desktop/alan/typing_game/side.cpp|117|1|V|cpp
+		refresh();
+		WINDOW *c_win=newwin(3,30, y, x);
+		PANEL *c_pan=new_panel(c_win);
+		update_panels();
+		doupdate();
+		wattron(c_win, COLOR_PAIR(yellow));
+		box(c_win, 0, 0);
+		mvwprintw(c_win,0, 2, text.c_str());
+		wrefresh(c_win);
+		for (int i=count;i>=0;--i){
+			mvwprintw(c_win, 1,1, "%d   ", i);
+			this_thread::sleep_for(seconds(1));
+			wrefresh(c_win);
+		}
+		wattroff(c_win, COLOR_PAIR(yellow));
+		hide_panel(c_pan);
+		del_panel(c_pan);
+		delwin(c_win);
+		refresh();
+368b96f13f760d8fe2e070c937e9a70d|file:///Users/sophieyou/Desktop/alan/typing_game/side.cpp|147|14|v|cpp
+	class _Mutex
+e717805cba9612141f6c45ded2046234|file:///Users/sophieyou/Desktop/alan/typing_game/side.cpp|175|1|V|cpp
+			//mvwprintw(c_win, 1,1, "%d   ", i);
+			//this_thread::sleep_for(seconds(1));
+17ba726d9e1205befdc194a8bdcc24bc|file:///Users/sophieyou/Desktop/alan/typing_game/side.cpp|175|1|V|cpp
+			//mvwprintw(c_win, 1,1, "%d   ", i);
+			//this_thread::sleep_for(seconds(1));
+			//wrefresh(c_win);
+95b639dc38639e51a4d0cfa86241ad1a|file:///Users/sophieyou/Desktop/alan/typing_game/side.cpp|105|1|V|cpp
+			this_thread::sleep_for(seconds(1));
+da8415a0cf27cba737b92a2a51b47b9b|file:///Users/sophieyou/Desktop/alan/typing_game/side.cpp|152|1|V|cpp
+			void win();
+			void stop();
+			void sleep();
+96ed5324f9018d6c7c93e8800bfb4f2d|file:///Users/sophieyou/Desktop/alan/typing_game/side.cpp|168|1|V|cpp
+	
+	void t_clock::start(){
+		thread w(win);
+		thread e(except);
+		thread s(sleep);
+acd8f6b9bdf7a476874f0546cfb04915|file:///Users/sophieyou/Desktop/alan/typing_game/side.cpp|169|1|V|cpp
+	void t_clock::start(){
+		thread w(win);
+		thread e(except);
+		thread s(sleep);
+3957384a2a585305d0151889a4a09ac8|file:///Users/sophieyou/Desktop/alan/typing_game/side.cpp|169|1|V|cpp
+	void t_clock::start(){
+		thread w(win);
+		thread e(except);
+		thread s(sleep);
+	
+		w.join();
+		e.join();
+		s.join();
+	}
+77d7017a834e1ae904917654c2f9de78|file:///Users/sophieyou/Desktop/alan/typing_game/side.cpp|169|1|V|cpp
+	void t_clock::start(){
+		thread w(win);
+		thread e(except);
+		thread s(sleep);
+	
+		w.join();
+		e.join();
+		s.join();
+	}
+	
+a529c3db579f2a55f86cd57386b426e3|file:///Users/sophieyou/Desktop/alan/typing_game/side.cpp|170|1|V|cpp
+		thread w(win);
+		thread e(except);
+		thread s(sleep);
+	
+		w.join();
+		e.join();
+		s.join();
+	}
+	
+	void t_clock::win(){
+2cc798d36b08fab0224eaf970f7a774a|file:///Users/sophieyou/Desktop/alan/typing_game/side.cpp|162|1|V|cpp
+	t_clock::t_clock(string t, int c, int a, int b){
+		this->text=t;
+		this->count=c;
+		this->x=a;
+		this->y=b;
+	}
+	
+	void t_clock::start(){
+		thread w(win);
+fde00fbc7e884a9cdeefef1100ce8586|file:///Users/sophieyou/Desktop/alan/typing_game/side.cpp|162|1|V|cpp
+	t_clock::t_clock(string t, int c, int a, int b){
+		this->text=t;
+		this->count=c;
+		this->x=a;
+		this->y=b;
+	}
+c6fca2be437f1165c9b4fb739391ba9e|file:///Users/sophieyou/Desktop/alan/typing_game/side.cpp|162|1|V|cpp
+	t_clock::t_clock(string t, int c, int a, int b){
+		this->text=t;
+		this->count=c;
+		this->x=a;
+		this->y=b;
+	}
+	
+4ec652294aecdb2ab068f1bc3c0d3613|file:///Users/sophieyou/Desktop/alan/typing_game/side.cpp|162|1|V|cpp
+	t_clock::t_clock(string t, int c, int a, int b){
+		this->text=t;
+		this->count=c;
+		this->x=a;
+		this->y=b;
+	}
+	
+	void t_clock::start(){
+50739de86b037a9266dc39498d9bdd50|file:///Users/sophieyou/Desktop/alan/typing_game/main.cpp|164|1|V|cpp
+		//auto clock_a = async(launch::async, clock_win, "countdown", 10, 0, LINES/2);

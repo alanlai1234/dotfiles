@@ -58,7 +58,7 @@ _fzf_complete_cd(){
 
 # Setting PATH for Python 3.7
 # The original version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
+#PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
 
 # autojump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh

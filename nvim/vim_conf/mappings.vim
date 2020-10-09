@@ -5,27 +5,25 @@ inoremap <C-h> <Left>
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-l> <Right>
-map <silent> <leader>t :Vista finder<CR>
-map <silent> / :BLines <CR>
+map <silent> <leader>t :Clap tags<CR>
+map <silent> / :Clap blines <CR>
 ab qq q!
 let g:SuperTabDefaultCompletionType = "<c-n>"
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)
-map <silent> <leader>b :Buffers <CR>
 map <silent> <leader>s :w <CR>
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 nnoremap <silent> <leader>y  :<C-u>CocList -A --normal yank<cr>
 nmap 0 ^
-nmap <C-g> $
 "map <leader>f :Np <CR>
 nmap <silent> <leader>n :bn <CR>
 nmap <silent> <leader>p :bp <CR>
 nmap <silent> <leader>d :bd <CR>
 nnoremap <silent> <leader>hh :SignifyHunkDiff<CR>
 nnoremap <silent> <leader>hu :SignifyHunkUndo<CR>
-nnoremap <leader>f :FZF<CR>
+nnoremap <leader>f :Clap filer<CR>
 
 " delete but not cut
 nnoremap x "_x

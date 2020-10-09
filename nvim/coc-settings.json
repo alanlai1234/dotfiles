@@ -9,5 +9,6 @@
   },
   "explorer.file.showHiddenFiles": true,
   "yank.list.maxsize": 21,
-  "yank.highlight.duration": 200
+  "yank.highlight.duration": 200,
+	"clangd.semanticHighlighting": true
 }

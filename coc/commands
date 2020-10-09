@@ -1,4 +1,5 @@
 explorer
+clangd.symbolInfo
 yank.clean
 snippets.editSnippets
 python.createTerminal

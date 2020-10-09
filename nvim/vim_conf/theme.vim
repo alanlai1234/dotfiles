@@ -21,7 +21,7 @@ if (has("nvim"))
     set termguicolors
 endif
 
-set background=light
+set background=dark
 
 " vimwiki syntax highlights
 hi VimwikiLink guifg=#98D4F2 gui=underline
@@ -44,12 +44,12 @@ if &background=="dark"
 
 	"other
 	hi PmenuSel guibg=#747a8c guifg=#c8cdde
-	hi TabLineSel guibg=#2c2e34 guifg=#c8cdde
+	hi TabLineSel guibg=#2c2e34 guifg=white
 	hi SignColumn ctermfg=250 ctermbg=236 guifg=#e2e2e3 guibg=#2c2e34
-	hi TabLineFill guifg=#2c2e34
+	hi TabLineFill guifg=#c8cdde
 
 else
-	colorscheme solarized8
+	colorscheme solarized8_high
 
 	"statusline presets
 	let stbg = '#eedfbb'
@@ -61,8 +61,9 @@ else
 	"other
 	hi PmenuSel guibg=#e8dcb6 guifg=black
 	hi LineNr guibg=#FDF6E3
-	hi TabLineSel guifg=#FDF6E3 guibg=black
+	hi TabLineSel guifg=#e8dcb6 guibg=black
 	hi SignColumn ctermfg=250 ctermbg=236 guifg=#e2e2e3 guibg=#FDF6E3
-	hi TabLineFill guifg=#FDF6E3
+	highlight VertSplit guibg=NONE guifg=230
+	hi TabLineFill guifg=#FDF6E3 guibg=grey
 
 endif
