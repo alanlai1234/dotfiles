@@ -1,5 +1,7 @@
 alias fnd='fd -d 1 -H'
 
+alias le='leetcode'
+
 alias sources='source $(find ~/Desktop/alan/dotfiles -maxdepth 1 -not -type d | fzf)'
 
 alias todo='todo.sh'

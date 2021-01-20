@@ -21,29 +21,10 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_guide_size = 1
 let g:indent_guides_indent_levels = 3
-"indent line
-"set list lcs=tab:\|\ 
-"let g:indentLine_char = '|'
-"comfortable motion
-let g:comfortable_motion_friction = 52.0
-let g:comfortable_motion_air_drag = 8.0
-
-"workspace config
-let g:workspace_create_new_tabs = 0
 
 " make vim smoother
 set timeoutlen=1000
 set ttimeoutlen=0
-
-"fzf
-"let g:FZF_DEFAULT_OPTS="--color=dark --color=fg:7,bg:-1,hl:1,fg+:#FFFFFF,bg+:-1,hl+:1 --color=info:0,prompt:0,pointer:12,marker:4,spinner:11,header:-1 --layout=reverse  --margin=1,4"
-let g:fzf_colors = {
-			\ 'hl':      ['fg', 'Comment'],
-			\ 'fg+':     ['fg', 15],
-			\ 'bg+':     ['bg', 'Normal'],
-			\ 'hl+':     ['fg', 'Statement'],
-			\ 'prompt':  ['fg', 'Exception'],
-			\ 'info': ['fg', 'Exception']}
 
 autocmd! FileType fzf set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 ruler
@@ -58,10 +39,25 @@ let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
 let g:vista_fzf_preview = ['right:50%']
 let g:vista#renderer#enable_icon = 1
 
-"nvim treesitter
-"lua <<EOF
-"require'nvim-treesitter.configs'.setup {
-    "-- Modules and its options go here
-    "highlight = { enable = true },
-"}
+":lua <<EOF
+	"local nvim_lsp = require('lspconfig')
+	"local on_attach = function(_, bufnr)
+		"local opts = { noremap=true, silent=true }
+		"vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+		"vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
+		"vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
+		"vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+		"vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+		"vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>xD', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
+		"vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>xr', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
+		"vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+		"vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>xd', '<cmd>lua vim.lsp.util.show_line_diagnostics()<CR>', opts)
+	"end
+	"local servers = {'clangd', 'gopls'}
+	"for _, lsp in ipairs(servers) do
+		"nvim_lsp[lsp].setup {
+		  "on_attach = on_attach,
+		"}
+	"end
+
 "EOF

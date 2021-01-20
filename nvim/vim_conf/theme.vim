@@ -67,3 +67,7 @@ else
 	hi TabLineFill guifg=#FDF6E3 guibg=grey
 
 endif
+
+hi HighlightedyankRegion guibg=#50b3af
+
+let g:clap_theme = 'material_design_dark'
