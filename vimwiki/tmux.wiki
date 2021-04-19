@@ -12,3 +12,4 @@
 	* save session - ~~prefix-C-s~~
 	* restore session - ~~prefix-C-r~~
 	* tmux spotify - ~~prefix-s~~
+	* enter vim copy mode - ~~prefix-[~~ , quit - ~~q~~

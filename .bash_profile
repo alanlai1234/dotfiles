@@ -2,8 +2,6 @@ alias fnd='fd -d 1 -H'
 
 alias le='leetcode'
 
-alias sources='source $(find ~/Desktop/alan/dotfiles -maxdepth 1 -not -type d | fzf)'
-
 alias todo='todo.sh'
 
 alias mc='mc -s'
@@ -24,7 +22,7 @@ alias gitlog='git log --oneline'
 
 alias gitaddcommit='git add -A ; git commit '
 
-alias python='python3'
+alias python='python3.8'
 
 export PATH=${PATH}:/usr/local/opt/llvm/bin/:/Users/sophieyou/Desktop/alan/todo
 

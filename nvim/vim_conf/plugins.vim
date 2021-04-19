@@ -4,8 +4,8 @@ filetype off                  " required
 call plug#begin('~/.vim/plugged')
 
 " Plugins go here
-Plug 'prabirshrestha/vim-lsp'
-Plug 'mattn/vim-lsp-settings'
+Plug 'alanlai1234/vim-calculator'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'lifepillar/vim-solarized8'
 Plug 'sainnhe/sonokai'
 Plug 'christoomey/vim-tmux-navigator'
@@ -20,9 +20,8 @@ Plug 'chaoren/vim-wordmotion'
 Plug 'mhinz/vim-signify'
 Plug 'ryanoasis/vim-devicons'
 Plug 'ap/vim-buftabline'
-"Plug 'neovim/nvim-lspconfig'
-"Plug 'jackguo380/vim-lsp-cxx-highlight'
-Plug 'rstacruz/vim-closer'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'jiangmiao/auto-pairs'
+Plug 'preservim/vimux'
 
 call plug#end()
-

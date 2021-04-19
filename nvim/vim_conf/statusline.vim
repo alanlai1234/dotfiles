@@ -102,6 +102,7 @@ set statusline+=%#roundfg#
 set statusline+=%#icon#\ %{WebDevIconsGetFileTypeSymbol()}\ \ 
 set statusline+=%#global#
 set statusline+=%t\ %#modify#%{SetModifiedSymbol(&modified)}
+set statusline+=%r
 set statusline+=%#roundfg#
 
 "right

@@ -4,15 +4,12 @@ imap <C-a> <ESC>
 map <silent> <leader>t :Clap tags<CR>
 map <silent> / :Clap blines <CR>
 ab qq q!
+command YY execute "%y"
 let g:SuperTabDefaultCompletionType = "<c-n>"
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-"nmap <silent> gd <Plug>(coc-definition)
-"nmap <silent> gr <Plug>(coc-references)
 map <silent> <leader>s :w <CR>
-"nmap <silent> [g <Plug>(coc-diagnostic-prev)
-"nmap <silent> ]g <Plug>(coc-diagnostic-next)
-"nnoremap <silent> <leader>y  :<C-u>CocList -A --normal yank<cr>
 nmap 0 ^
+nmap F $
 nmap <silent> <leader>n :bn <CR>
 nmap <silent> <leader>p :bp <CR>
 nmap <silent> <leader>d :bd <CR>
@@ -35,13 +32,19 @@ map n <Nop>
 map <C-c> <Nop>
 
 " run program
-let file=expand("%:p")
-let exe=expand("%:p:r")
-autocmd Filetype c execute "map <silent> <C-c> :w <CR> :VimuxPromptCommand <CR> cd " . expand("%:p:h") ." && gcc " . file ." -o " . exe ." && " . exe ." <CR>"
+"autocmd Filetype c execute "map <silent> <C-c> :w <CR> :VimuxPromptCommand <CR> cd " . expand("%:p:h") ." && gcc " . file ." -o " . exe ." && " . exe ." <CR>"
 "autocmd Filetype python execute "nmap <silent> <C-c>> :w <CR> :VimuxPromptCommand <CR> python " . file ."<CR>"
-"autocmd Filetype cpp execute "map <silent> <C-c> :w <CR> :VimuxPromptCommand <CR> cd " . expand("%:p:h") ." && g++ " . file ." -o " . exe ." && " . exe ." <CR>"
+autocmd Filetype cpp execute 'nmap <C-c> :call VimuxRunCommand("g++ -std=c++11 ".@%." -o ".expand("%:p:r")." && ".expand("%:p:r")) <CR>'
 nmap ; :
 
-" coc-explorer
-"nmap <silent> <leader>e :CocCommand explorer<CR>
-"autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+"coc
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+"move text block or line
+nnoremap <down> :m .+1<CR>==
+nnoremap <up> :m .-2<CR>==
+vnoremap <down> :m '>+1<CR>gv=gv
+vnoremap <up> :m '<-2<CR>gv=gv

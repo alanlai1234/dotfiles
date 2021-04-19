@@ -32,11 +32,12 @@
 		# delete the char on the cursor - ~~x~~
 		# paste text - ~~p(forward)/P(backward) (C-v)~~
 		# replace character on the cursor - ~~r[char]~~
+		# move block or row of text up and down(both nornal and visual mode) - ~~<up>~~, ~~<down>~~
 	== movement keys ==
 		# simple moves - ~~[relative_num]hjkl~~
 		# move to end of the word - ~~w~~
 		# end of the word but not include space - ~~e~~
-		# move to the end of the line - ~~$/C-g~~
+		# move to the end of the line - ~~$/F~~
 		# move backward a word - ~~b~~
 		# start of the line - ~~0~~
 		# start of the buffer - ~~gg~~
@@ -74,4 +75,4 @@
 		# delete window - ~~<leader>d~~
 
 = configs =
-	$vimrc (it'll show a list of config file)
+	$vimrc (it'll shows a list of config file with fzf)

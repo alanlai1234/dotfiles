@@ -33,7 +33,7 @@
 	* get html from remote - ~~curl [url]~~
 	== dealing with files & text==
 		# return text to a file - ~~[command returns] > [filename]~~(a none exists file)(~~>>~~ to append to existed file)
-		# move returned text to trash - ~~[command] > /dev/null~~
+		# delete file content - ~~cat /dev/null >> [filename]~~
 		# get current dir - ~~pwd~~
 		# move up dir - ~~..~~
 		# rename or move file - ~~mv [old filename or old folder name] [new filename or new folder name]~~
