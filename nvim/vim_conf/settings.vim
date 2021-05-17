@@ -13,8 +13,8 @@ set tabstop=4
 set shiftwidth=4
 set updatetime=100
 " fold settings
-set foldmethod=expr
-set foldexpr=nvim_treesitter#foldexpr()
+"set foldmethod=expr
+"set foldexpr=nvim_treesitter#foldexpr()
 set foldlevel=10
 set foldnestmax=3 
 "end fold settings
@@ -30,25 +30,20 @@ set ttimeoutlen=0
 autocmd! FileType fzf set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 ruler
 
-"vista.vim
-let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
-let g:vista#renderer#enable_icon = 1
-let g:vista_default_executive = 'coc'
-
 "treesitter
-:lua <<EOF
-require'nvim-treesitter.configs'.setup {
-  highlight = {
-    enable = true,              
-  },
-}
-require "nvim-treesitter.highlight"
-vim.treesitter.highlighter.hl_map.error = nil
-EOF
+":lua <<EOF
+"require'nvim-treesitter.configs'.setup {
+  "highlight = {
+    "enable = true,              
+  "},
+"}
+"require "nvim-treesitter.highlight"
+"vim.treesitter.highlighter.hl_map.error = nil
+"EOF
 
 "python support
-let g:python3_host_prog = '/Library/Frameworks/Python.framework/Versions/3.8/bin/python3.8'
-let g:loaded_python_provider = 0
+"let g:python3_host_prog = '/Library/Frameworks/Python.framework/Versions/3.8/bin/python3.8'
+"let g:loaded_python_provider = 0
 
 "vimspector
-let g:vimspector_enable_mappings = 'HUMAN'
+"let g:vimspector_enable_mappings = 'HUMAN'

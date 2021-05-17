@@ -1,30 +1,14 @@
-alias fnd='fd -d 1 -H'
-
-alias le='leetcode'
-
-alias todo='todo.sh'
-
-alias mc='mc -s'
-
-alias vem='nvim -u ~/vem/vemrc'
-
 alias ..='cd ..'
 
-alias ls='exa'
+alias la='ls -al'
 
-alias cur="echo $$"
-
-alias la='exa -aghl --git'
+alias fd='fdfind'
 
 alias rmd='rm -rf'
 
 alias gitlog='git log --oneline'
 
 alias gitaddcommit='git add -A ; git commit '
-
-alias python='python3.8'
-
-export PATH=${PATH}:/usr/local/opt/llvm/bin/:/Users/sophieyou/Desktop/alan/todo
 
 export TERM=xterm-256color
 
@@ -36,17 +20,15 @@ alias vimrc='vim ~/.config/nvim/vim_conf/$(ls ~/.config/nvim/vim_conf | fzf)'
 
 alias tmuxa='tmux a -t'
 
-alias gtop='gotop'
-
 alias tmuxd='tmux detach'
 
 alias vim='nvim'
 
 set -o vi
-
+. /usr/share/autojump/autojump.sh
 # fzf settings
 export FZF_DEFAULT_OPTS="--color=dark --color=fg:7,bg:-1,hl:1,fg+:12,bg+:-1,hl+:1 --color=info:43,prompt:6,pointer:12,marker:4,spinner:11,header:-1 --layout=reverse  --margin=1,4 --height 50%"
-export FZF_DEFAULT_COMMAND="fd -d 1 -H"
+export FZF_DEFAULT_COMMAND="fdfind -d 1 -H"
 _fzf_compgen_dir() {
   fd -d 1 -H 
 }
