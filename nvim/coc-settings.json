@@ -1,5 +1,4 @@
 {
-	"diagnostic.messageTarget": "echo",
-	"python.pythonPath": "/Library/Frameworks/Python.framework/Versions/3.8/bin/python3.8",
-	"clangd.compilationDatabasePath": "/usr/local/include/"
+  "diagnostic.messageTarget": "echo",
+  "clangd.path": "/home/laialan/.config/coc/extensions/coc-clangd-data/install/12.0.0/clangd_12.0.0/bin/clangd"
 }

@@ -1,0 +1,4 @@
+{
+	"diagnostic.messageTarget": "echo",
+	"clangd.compilationDatabasePath": "/usr/local/include/"
+}

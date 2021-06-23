@@ -40,3 +40,6 @@ nnoremap <down> :m .+1<CR>==
 nnoremap <up> :m .-2<CR>==
 vnoremap <down> :m '>+1<CR>gv=gv
 vnoremap <up> :m '<-2<CR>gv=gv
+
+"findr.vim
+nmap <silent> <leader>f :Findr<CR>

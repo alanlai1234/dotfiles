@@ -25,7 +25,6 @@ alias tmuxd='tmux detach'
 alias vim='nvim'
 
 set -o vi
-. /usr/share/autojump/autojump.sh
 # fzf settings
 export FZF_DEFAULT_OPTS="--color=dark --color=fg:7,bg:-1,hl:1,fg+:12,bg+:-1,hl+:1 --color=info:43,prompt:6,pointer:12,marker:4,spinner:11,header:-1 --layout=reverse  --margin=1,4 --height 50%"
 export FZF_DEFAULT_COMMAND="fdfind -d 1 -H"
@@ -41,6 +40,3 @@ _fzf_complete_cd(){
 # Setting PATH for Python 3.7
 # The original version is saved in .bash_profile.pysave
 #PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
-
-# autojump
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
