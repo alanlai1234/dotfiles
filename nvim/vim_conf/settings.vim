@@ -6,7 +6,7 @@ syntax on
 set mouse=a
 set hidden
 set encoding=utf-8
-set clipboard=unnamed
+set clipboard=unnamedplus
 set nocursorline
 set number relativenumber
 set tabstop=4

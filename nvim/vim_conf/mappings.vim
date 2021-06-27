@@ -21,7 +21,6 @@ nnoremap s "_s
 nnoremap C "_C
 
 "vim's native search is annoying, often miss click it
-map n <Nop>
 map <C-c> <Nop>
 
 " run program

@@ -40,3 +40,10 @@ _fzf_complete_cd(){
 # Setting PATH for Python 3.7
 # The original version is saved in .bash_profile.pysave
 #PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
+
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+PS1='[\u@\h \W]\$ '
