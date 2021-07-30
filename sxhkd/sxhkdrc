@@ -1,0 +1,83 @@
+#
+# wm independent hotkeys
+#
+
+# terminal emulator
+alt + Return
+	alacritty
+
+# program launcher
+alt + @space
+	~/.config/rofi/launchers/misc/launcher.sh
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+alt + {n,p}
+	bspc desktop --focus {next,prev}
+
+#
+# bspwm hotkeys
+#
+
+# quit/restart bspwm
+alt + shift + r
+	bspc wm -r
+
+alt + shift + q
+	~/.config/rofi/applets/android/powermenu.sh &
+
+# close and kill
+alt + q
+	bspc node -k
+
+#
+# focus/swap
+#
+
+# focus the node in the given direction
+alt + {h,j,k,l}
+	bspc node -f {west,south,north,east}
+
+# focus or send to the given desktop
+alt + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+#
+# move/resize
+#
+alt + shift + {h,j,k,l}
+  n=40; \
+  { d1=left;   d2=right;  dx=-$n; dy=0;   \
+  , d1=bottom; d2=top;    dx=0;   dy=$n;  \
+  , d1=top;    d2=bottom; dx=0;   dy=-$n; \
+  , d1=right;  d2=left;   dx=$n;  dy=0;   \
+  } \
+  bspc node --resize $d1 $dx $dy || bspc node --resize $d2 $dx $dy
+
+# move a floating window
+super + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+#
+# controls
+#
+XF86MonBrightness{Up,Down}
+	xbacklight -{inc,dec} 10
+
+XF86AudioMute
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+XF86Audio{Raise,Lower}Volume
+	pactl set-sink-volume @DEFAULT_SINK@ {+,-}5%
+
+super + shift + s
+	gnome-screenshot
+
+#
+# states
+#
+
+super + {t,shift + t,f,m}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}

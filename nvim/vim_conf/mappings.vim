@@ -9,6 +9,7 @@ nmap F $
 nmap <silent> <leader>n :bn <CR>
 nmap <silent> <leader>p :bp <CR>
 nmap <silent> <leader>d :bd <CR>
+nmap ; :
 
 " delete but not cut
 nnoremap x "_x
@@ -19,6 +20,10 @@ nnoremap c "_c
 vnoremap c "_c
 nnoremap s "_s
 nnoremap C "_C
+
+" move in the same line
+nnoremap k gk
+nnoremap j gj
 
 "vim's native search is annoying, often miss click it
 map <C-c> <Nop>

@@ -34,7 +34,7 @@ hi normal guibg=white
 
 if &background=="dark"
 	colorscheme sonokai
-	let g:vim_monokai_tasty_italic = 1
+	"let g:vim_monokai_tasty_italic = 1
 	"statusline presets
 	let stbg = '#40444a'
 	exe 'hi roundfg guifg=' . stbg
@@ -69,5 +69,3 @@ else
 endif
 
 hi HighlightedyankRegion guibg=#50b3af
-
-let g:clap_theme = 'material_design_dark'

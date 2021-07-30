@@ -1,4 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+# Add this script to your wm startup file.
+
+DIR="$HOME/.config/polybar/docky"
 
 # Terminate already running bar instances
 killall -q polybar
@@ -6,5 +10,5 @@ killall -q polybar
 # Wait until the processes have been shut down
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
-# Launch Polybar, using default config location ~/.config/polybar/config
-polybar -c ~/.config/polybar/config-tmp bar &
+# Launch the bar
+polybar -q main -c "$DIR"/config.ini &

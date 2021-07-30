@@ -13,8 +13,8 @@ set tabstop=4
 set shiftwidth=4
 set updatetime=100
 " fold settings
-set foldmethod=expr
-set foldexpr=nvim_treesitter#foldexpr()
+"set foldmethod=expr
+"set foldexpr=nvim_treesitter#foldexpr()
 set foldlevel=10
 set foldnestmax=3 
 "end fold settings
