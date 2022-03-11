@@ -47,3 +47,26 @@ EOF
 
 "vimspector
 "let g:vimspector_enable_mappings = 'HUMAN'
+
+" discord rich presence
+":lua <<EOF
+"require("presence"):setup({
+    "auto_update         = true,
+    "neovim_image_text   = "neovim text editor",
+    "main_image          = "neovim",
+    "client_id           = "944957102458281984",
+    "log_level           = "debug",
+    "debounce_timeout    = 10,
+    "enable_line_number  = false,
+    "blacklist           = {},
+    "buttons             = false,
+    "file_assets         = {},
+    "editing_text        = "Editing %s",
+    "file_explorer_text  = "Browsing %s",
+    "git_commit_text     = "Committing changes",
+    "plugin_manager_text = "Managing plugins",
+    "reading_text        = "Reading %s",
+    "workspace_text      = "Working on %s",
+    "line_number_text    = "Line %s out of %s",
+"})
+"EOF

@@ -8,7 +8,7 @@ Plug 'sainnhe/sonokai'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'preservim/nerdcommenter'
 Plug 'ervandew/supertab'
-Plug 'vimwiki/vimwiki'
+"Plug 'vimwiki/vimwiki'
 Plug 'wellle/targets.vim'
 Plug 'mhinz/vim-signify'
 Plug 'ryanoasis/vim-devicons'
@@ -16,5 +16,7 @@ Plug 'ap/vim-buftabline'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 "Plug 'preservim/vimux'
 Plug 'conweller/findr.vim'
+"Plug 'andweeb/presence.nvim'
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()

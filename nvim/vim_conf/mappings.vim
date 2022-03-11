@@ -31,7 +31,8 @@ map <C-c> <Nop>
 " run program
 "autocmd Filetype c execute "map <silent> <C-c> :w <CR> :VimuxPromptCommand <CR> cd " . expand("%:p:h") ." && gcc " . file ." -o " . exe ." && " . exe ." <CR>"
 "autocmd Filetype python execute "nmap <silent> <C-c>> :w <CR> :VimuxPromptCommand <CR> python " . file ."<CR>"
-autocmd Filetype cpp execute 'nmap <C-c> :call VimuxRunCommand("g++ -std=c++11 ".@%." -o ".expand("%:p:r")." && ".expand("%:p:r")) <CR>'
+autocmd Filetype cpp execute "nmap <C-c> :!g++ ".@%." -o ".expand("%:p:r")."<CR>"
+"expand("%:p:r")
 
 "coc
 nmap <silent> gd <Plug>(coc-definition)
@@ -47,3 +48,6 @@ vnoremap <up> :m '<-2<CR>gv=gv
 
 "findr.vim
 nmap <silent> <leader>f :Findr<CR>
+
+"exit terminal mode
+tnoremap <C-\> <C-\><C-n>

@@ -9,8 +9,8 @@
 
 configuration {
     disable-history:                false;
-    fullscreen:                     false;
-	hide-scrollbar: 				true;
+	/*fullscreen:                     false;*/
+	/*hide-scrollbar: 				true;*/
 	sidebar-mode: 					false;
 }
 
