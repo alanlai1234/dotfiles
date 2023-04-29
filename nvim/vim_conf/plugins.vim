@@ -3,11 +3,18 @@ filetype off                  " required
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
+
 Plug 'sainnhe/sonokai'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'preservim/nerdcommenter'
-"Plug 'ervandew/supertab'
 "Plug 'vimwiki/vimwiki'
 Plug 'wellle/targets.vim'
 Plug 'mhinz/vim-signify'

@@ -86,13 +86,14 @@ set statusline+=%#Normal#
 set statusline+=\ \ 
 
 "modes
+let vb = "\<C-v>"
 set statusline+=%#NormalColor#%{(mode()=='n')?'\ <N>':''}
 set statusline+=%#InsertColor#%{(mode()=='i')?'\ <I>':''}
 set statusline+=%#ReplaceColor#%{(mode()=='R')?'\ <R>':''}
 set statusline+=%#VisualColor#%{(mode()=='v')?'\ <V>':''}
 set statusline+=%#CommandColor#%{(mode()=='c')?'\ <C>':''}
 set statusline+=%#LineColor#%{(mode()=='V')?'\ <V-L>':''}
-set statusline+=%#CommandColor#%{(mode()=='\<C-v>')?'\ <V-B>':''}
+set statusline+=%#CommandColor#%{(mode()==vb)?'\ <V-B>':''}
 
 set statusline+=%#Normal#
 
@@ -106,7 +107,7 @@ set statusline+=%r
 set statusline+=%#roundfg#
 
 "right
-" coc diagnostic
+" diagnostic
 set statusline+=%=
 set statusline+=%#good#%{Good()}%#err#%{Error()}\ %#warn#%{Warning()}\ \ 
 

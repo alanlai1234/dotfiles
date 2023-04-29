@@ -1,22 +1,7 @@
-"color theme
-"let g:onedark_hide_endofbuffer = 1
-"let g:onedark_termcolors = 256
-"if (has("autocmd"))
-  "augroup colorextend
-	"autocmd!
-	"autocmd ColorScheme * call onedark#extend_highlight("Normal", { "bg": { "gui": "#1e2127" } })
-	""autocmd ColorScheme * call onedark#extend_highlight("Pmenu", { "bg": { "gui": "#21252B" } } )
-	"autocmd ColorScheme * call onedark#extend_highlight("PmenuSel", { "bg": { "gui": "#767F98" } } )
-  "augroup END
-"endif
-
 if (has("nvim"))
-    "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
     let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-  endif
-  "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
-  "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
-  " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
+endif
+
 if (has("termguicolors"))
     set termguicolors
 endif
@@ -27,7 +12,8 @@ set background=dark
 hi VimwikiLink guifg=#98D4F2 gui=underline
 hi VimwikiHeader2 guifg=orange 
 hi VimwikiBoldItalic guifg=#8982C9
-hi normal guibg=white
+
+"hi normal guibg=white
 "hi PmenuSel guibg=#747a8c guifg=#c8cdde
 "hi TabLineSel guibg=#2c2e34 guifg=#c8cdde
 "hi SignColumn ctermfg=250 ctermbg=236 guifg=#e2e2e3 guibg=#2c2e34
@@ -48,7 +34,7 @@ if &background=="dark"
 	hi TabLineFill guifg=#c8cdde
 
 	"coc.nvim custom popup menu color
-	hi CocMenuSel guibg=#747a8c 
+	"hi CocMenuSel guibg=#747a8c 
 
 else
 	colorscheme solarized8_high
