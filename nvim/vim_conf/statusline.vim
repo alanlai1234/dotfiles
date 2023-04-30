@@ -10,6 +10,8 @@ hi LineColor guifg=#659666
 hi err guifg=#e85635
 hi warn guifg=#d17a32
 hi good guifg=#8acf72
+hi roundtrans guifg=#b06b27 guibg=#40444a
+hi round2fg guifg=#b06b27
 
 " function
 "   Modification mark
@@ -87,19 +89,21 @@ set statusline+=\ \
 
 "modes
 let vb = "\<C-v>"
+set statusline+=%#round2fg#
 set statusline+=%#NormalColor#%{(mode()=='n')?'\ <N>':''}
 set statusline+=%#InsertColor#%{(mode()=='i')?'\ <I>':''}
 set statusline+=%#ReplaceColor#%{(mode()=='R')?'\ <R>':''}
 set statusline+=%#VisualColor#%{(mode()=='v')?'\ <V>':''}
 set statusline+=%#CommandColor#%{(mode()=='c')?'\ <C>':''}
 set statusline+=%#LineColor#%{(mode()=='V')?'\ <V-L>':''}
-set statusline+=%#CommandColor#%{(mode()==vb)?'\ <V-B>':''}
+set statusline+=%#ReplaceColor#%{(mode()==vb)?'\ <V-B>':''}
+set statusline+=%#roundtrans#
 
-set statusline+=%#Normal#
+"set statusline+=%#Normal#
 
 " filename
-set statusline+=\ \ \ 
-set statusline+=%#roundfg#
+set statusline+=\ 
+"set statusline+=%#roundfg#
 set statusline+=%#icon#\ %{WebDevIconsGetFileTypeSymbol()}\ \ 
 set statusline+=%#global#
 set statusline+=%t\ %#modify#%{SetModifiedSymbol(&modified)}

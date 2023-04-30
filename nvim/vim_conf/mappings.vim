@@ -42,7 +42,7 @@ nnoremap j gj
 map <C-c> <Nop>
 
 " run program
-autocmd Filetype cpp execute "map <silent> <C-c> :w <CR> :VimuxPromptCommand <CR> cd " . expand("%:p:h") ." && g++ " . @% . " -o " . expand("%:p:r") ." && " . expand("%:p:r") ." <CR>"
+autocmd Filetype cpp execute "map <silent> <C-S-c> :w <CR> :VimuxPromptCommand <CR> cd " . expand("%:p:h") ." && g++ " . @% . " -o " . expand("%:p:r") ." && " . expand("%:p:r") ." <CR>"
 "autocmd Filetype python execute "nmap <silent> <C-c>> :w <CR> :VimuxPromptCommand <CR> python " . file ."<CR>"
 "autocmd Filetype cpp execute "nmap <C-c> :!g++ ".@%." -o ".expand("%:p:r")."<CR>"
 "expand("%:p:r")

@@ -4,28 +4,23 @@ set lazyredraw
 set noshowmode
 syntax on
 set mouse=a
-set hidden
 set encoding=utf-8
 set clipboard=unnamedplus
 set nocursorline
 set number relativenumber
 set tabstop=4
 set shiftwidth=4
-set updatetime=100
+
 " fold settings
 "set foldmethod=expr
 "set foldexpr=nvim_treesitter#foldexpr()
 set foldlevel=10
 set foldnestmax=3 
-"end fold settings
+
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_guide_size = 1
 let g:indent_guides_indent_levels = 3
-
-" make vim smoother
-set timeoutlen=1000
-set ttimeoutlen=0
 
 autocmd! FileType fzf set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 ruler
@@ -39,6 +34,7 @@ require'nvim-treesitter.configs'.setup {
 }
 EOF
 
+"nvim lsp
 :lua <<EOF
 require('lspconfig').clangd.setup{}
 require('lspconfig').pyright.setup{}
@@ -52,7 +48,7 @@ local kind_icons = {
   Function = "",
   Constructor = "",
   Field = "",
-  Variable = "",
+  Variable = "󱄑",
   Class = "ﴯ",
   Interface = "",
   Module = "",
@@ -75,13 +71,13 @@ local kind_icons = {
 }
 
 cmp.setup({
-    snippet = {
-      expand = function(args)
-        vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-      end,
-    },
+	snippet = {
+		expand = function(args)
+			vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+		end,
+	},
 	window = {
-	  completion = cmp.config.window.bordered(),
+		completion = cmp.config.window.bordered(),
 	  -- documentation = cmp.config.window.bordered(),
 	},
 	mapping = cmp.mapping.preset.insert({
@@ -134,15 +130,6 @@ cmp.setup({
 			return vim_item
 		end
 	}
-})
-
--- Set configuration for specific filetype.
-cmp.setup.filetype('gitcommit', {
-	sources = cmp.config.sources({
-		{ name = 'cmp_git' }, -- You can specify the `cmp_git` source if you were installed it.
-	}, {
-		{ name = 'buffer' },
-	})
 })
 
 -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
