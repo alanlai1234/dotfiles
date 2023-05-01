@@ -21,9 +21,9 @@ hi VimwikiBoldItalic guifg=#8982C9
 if &background=="dark"
 	colorscheme sonokai
 	"statusline presets
-	let stbg = '#40444a'
+	let stbg = '#535961'
 	exe 'hi roundfg guifg=' . stbg
-	exe 'hi global guibg=' . stbg . ' guifg=#c7c4ad'
+	exe 'hi global guibg=' . stbg . ' guifg=#ffffff'
 	exe 'hi icon guibg=' . stbg . ' guifg=LightBlue'
 	exe 'hi modify guibg=' . stbg . ' guifg=#cf6848'
 

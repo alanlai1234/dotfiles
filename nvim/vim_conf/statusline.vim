@@ -1,17 +1,22 @@
 set laststatus=2
 
 " color presets
-hi NormalColor guifg=#db9b32
-hi InsertColor guifg=#79b389 
-hi ReplaceColor guifg=#32abdb 
-hi VisualColor guifg=#a78acf 
-hi CommandColor guifg=#88b9c2
-hi LineColor guifg=#659666
 hi err guifg=#e85635
 hi warn guifg=#d17a32
 hi good guifg=#8acf72
-hi roundtrans guifg=#b06b27 guibg=#40444a
-hi round2fg guifg=#b06b27
+
+hi roundtrans guifg=#fab152 guibg=#535961
+hi round2fg guifg=#fab152
+hi ModeColor guibg=#fab152 guifg=#0b2026
+augroup VisualEvent
+  autocmd!
+  autocmd ModeChanged *:i* hi ModeColor guibg=#6ffc90|hi roundtrans guifg=#6ffc90|hi round2fg guifg=#6ffc90
+  autocmd ModeChanged *:c* hi ModeColor guibg=#53f7fc|hi roundtrans guifg=#53f7fc|hi round2fg guifg=#53f7fc
+  autocmd ModeChanged *:v* hi ModeColor guibg=#f2acfa|hi roundtrans guifg=#f2acfa|hi round2fg guifg=#f2acfa
+  autocmd ModeChanged *:V* hi ModeColor guibg=#659666 guifg=#d3dbd6|hi roundtrans guifg=#659666|hi round2fg guifg=#659666
+  autocmd ModeChanged *:* hi ModeColor guibg=#0d4f6b guifg=#d3dbd6|hi roundtrans guifg=#0d4f6b|hi round2fg guifg=#0d4f6b
+  autocmd Modechanged v*:*,c*:*,i*:*,V*:*,:* hi ModeColor guibg=#fab152 guifg=#0b2026|hi roundtrans guifg=#fab152|hi round2fg guifg=#fab152
+augroup END
 
 " function
 "   Modification mark
@@ -90,21 +95,21 @@ set statusline+=\ \
 "modes
 let vb = "\<C-v>"
 set statusline+=%#round2fg#
-set statusline+=%#NormalColor#%{(mode()=='n')?'\ <N>':''}
-set statusline+=%#InsertColor#%{(mode()=='i')?'\ <I>':''}
-set statusline+=%#ReplaceColor#%{(mode()=='R')?'\ <R>':''}
-set statusline+=%#VisualColor#%{(mode()=='v')?'\ <V>':''}
-set statusline+=%#CommandColor#%{(mode()=='c')?'\ <C>':''}
-set statusline+=%#LineColor#%{(mode()=='V')?'\ <V-L>':''}
-set statusline+=%#ReplaceColor#%{(mode()==vb)?'\ <V-B>':''}
+set statusline+=%#ModeColor#
+set statusline+=%{(mode()=='n')?'N':''}
+set statusline+=%{(mode()=='i')?'I':''}
+set statusline+=%{(mode()=='R')?'R':''}
+set statusline+=%{(mode()=='v')?'V':''}
+set statusline+=%{(mode()=='c')?'C':''}
+set statusline+=%{(mode()=='V')?'V-L':''}
+set statusline+=%{(mode()==vb)?'V-B':''}
 set statusline+=%#roundtrans#
 
 "set statusline+=%#Normal#
 
 " filename
-set statusline+=\ 
 "set statusline+=%#roundfg#
-set statusline+=%#icon#\ %{WebDevIconsGetFileTypeSymbol()}\ \ 
+set statusline+=%#icon#\ %{WebDevIconsGetFileTypeSymbol()}\ 
 set statusline+=%#global#
 set statusline+=%t\ %#modify#%{SetModifiedSymbol(&modified)}
 set statusline+=%r
