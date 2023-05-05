@@ -1,10 +1,9 @@
 set laststatus=2
 
 " color presets
-hi err guifg=#e85635
-hi warn guifg=#d17a32
-hi good guifg=#8acf72
-
+hi err guifg=#e85635 guibg=#535961
+hi warn guifg=#d17a32 guibg=#535961
+hi good guifg=#8acf72 guibg=#535961
 hi roundtrans guifg=#fab152 guibg=#535961
 hi round2fg guifg=#fab152
 hi ModeColor guibg=#fab152 guifg=#0b2026
@@ -28,63 +27,32 @@ function! SetModifiedSymbol(modified)
     return ' '
 endfunction
 
-"  coc lint information
+"diagnostic
 function! Error() abort
-  if (winwidth(0) < 40)
-    return ''
-  endif
-  let info = get(b:, 'coc_diagnostic_info', {})
-  let msgs = []
-
-  if get(info, 'error', 0)
-    call add(msgs, ' ' . info['error'])
-  endif
-
-  if(join(msgs, ' ') == '' )
-    return ''
-  else
-    return join(msgs, ' ')
-  endif
+	let cnt=luaeval("#vim.diagnostic.get(0,{severity=vim.diagnostic.severity.ERROR})")
+	if(cnt>0)
+		return ' ' . cnt
+	else
+		return ''
+	endif
 endfunction
 
 function! Warning() abort
-  if (winwidth(0) < 40)
-    return ''
-  endif
-  let info = get(b:, 'coc_diagnostic_info', {})
-  let msgs = []
-
-  if get(info, 'warning', 0)
-    call add(msgs, ' ' . info['warning'])
-  endif
-
-  if(join(msgs, ' ') == '' )
-    return ''
-  else
-    return join(msgs, ' ')
-  endif
+	let cnt=luaeval("#vim.diagnostic.get(0,{severity=vim.diagnostic.severity.WARN})")
+	if(cnt>0)
+		return ' ' . cnt
+	else
+		return ''
+	endif
 endfunction
 
 function! Good() abort
-  if (winwidth(0) < 40)
-    return ''
-  endif
-  let info = get(b:, 'coc_diagnostic_info', {})
-  if empty(info) | return ' ' | endif 
-  let flag = 0
-
-  if get(info, 'error', 0)
-    let flag=1
-  endif
-  if get(info, 'warning', 0)
-    let flag=1
-  endif
-
-  if(flag==0)
-    return ' '
-  else
-    return ''
-  endif
+	let cnt=luaeval("#vim.diagnostic.get(0,{severity=vim.diagnostic.severity.ERROR})")+luaeval("#vim.diagnostic.get(0,{severity=vim.diagnostic.severity.WARN})")
+	if(cnt==0)
+		return ''
+	else
+		return ''
+	endif
 endfunction
 
 " start
@@ -96,13 +64,7 @@ set statusline+=\ \
 let vb = "\<C-v>"
 set statusline+=%#round2fg#
 set statusline+=%#ModeColor#
-set statusline+=%{(mode()=='n')?'N':''}
-set statusline+=%{(mode()=='i')?'I':''}
-set statusline+=%{(mode()=='R')?'R':''}
-set statusline+=%{(mode()=='v')?'V':''}
-set statusline+=%{(mode()=='c')?'C':''}
-set statusline+=%{(mode()=='V')?'V-L':''}
-set statusline+=%{(mode()==vb)?'V-B':''}
+set statusline+=%{mode()}
 set statusline+=%#roundtrans#
 
 "set statusline+=%#Normal#
@@ -118,10 +80,13 @@ set statusline+=%#roundfg#
 "right
 " diagnostic
 set statusline+=%=
-set statusline+=%#good#%{Good()}%#err#%{Error()}\ %#warn#%{Warning()}\ \ 
 
-set statusline+=%#roundfg#
-set statusline+=%#global#%l
+set statusline+=%#round2fg#
+set statusline+=%#ModeColor#%l
 set statusline+=/ 
 set statusline+=%L
+set statusline+=%#roundtrans#\ 
+
+set statusline+=%#global#
+set statusline+=%#good#%{Good()}%#err#%{Error()}\ %#warn#%{Warning()}
 set statusline+=%#roundfg#\ \ 
