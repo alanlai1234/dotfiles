@@ -31,7 +31,7 @@ endfunction
 function! Error() abort
 	let cnt=luaeval("#vim.diagnostic.get(0,{severity=vim.diagnostic.severity.ERROR})")
 	if(cnt>0)
-		return ' ' . cnt
+		return ' ' . cnt
 	else
 		return ''
 	endif
@@ -40,7 +40,7 @@ endfunction
 function! Warning() abort
 	let cnt=luaeval("#vim.diagnostic.get(0,{severity=vim.diagnostic.severity.WARN})")
 	if(cnt>0)
-		return ' ' . cnt
+		return ' ' . cnt
 	else
 		return ''
 	endif
@@ -49,7 +49,7 @@ endfunction
 function! Good() abort
 	let cnt=luaeval("#vim.diagnostic.get(0,{severity=vim.diagnostic.severity.ERROR})")+luaeval("#vim.diagnostic.get(0,{severity=vim.diagnostic.severity.WARN})")
 	if(cnt==0)
-		return ''
+		return ''
 	else
 		return ''
 	endif

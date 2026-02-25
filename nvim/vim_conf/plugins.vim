@@ -3,6 +3,7 @@ filetype off                  " required
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'rachartier/tiny-inline-diagnostic.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
@@ -22,7 +23,6 @@ Plug 'akinsho/bufferline.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'preservim/vimux'
 Plug 'conweller/findr.vim'
-"Plug 'andweeb/presence.nvim'
-Plug 'jiangmiao/auto-pairs'
+Plug 'windwp/nvim-autopairs'
 
 call plug#end()
