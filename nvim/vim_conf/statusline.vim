@@ -1,4 +1,4 @@
-set laststatus=2
+set laststatus=3
 
 " color presets
 hi err guifg=#e85635 guibg=#535961
@@ -67,8 +67,6 @@ set statusline+=%#ModeColor#
 set statusline+=%{mode()}
 set statusline+=%#roundtrans#
 
-"set statusline+=%#Normal#
-
 " filename
 "set statusline+=%#roundfg#
 set statusline+=%#icon#\ %{WebDevIconsGetFileTypeSymbol()}\ 
@@ -76,6 +74,7 @@ set statusline+=%#global#
 set statusline+=%t\ %#modify#%{SetModifiedSymbol(&modified)}
 set statusline+=%r
 set statusline+=%#roundfg#
+set statusline+=%#Normal#
 
 "right
 " diagnostic
@@ -89,4 +88,5 @@ set statusline+=%#roundtrans#\
 
 set statusline+=%#global#
 set statusline+=%#good#%{Good()}%#err#%{Error()}\ %#warn#%{Warning()}
+set statusline+=%#Normal#
 set statusline+=%#roundfg#\ \ 

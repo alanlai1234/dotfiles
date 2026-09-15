@@ -13,6 +13,7 @@ Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 
 Plug 'sainnhe/sonokai'
+Plug 'sainnhe/gruvbox-material'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'preservim/nerdcommenter'
 "Plug 'vimwiki/vimwiki'
@@ -20,9 +21,12 @@ Plug 'wellle/targets.vim'
 Plug 'mhinz/vim-signify'
 Plug 'ryanoasis/vim-devicons'
 Plug 'akinsho/bufferline.nvim'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'preservim/vimux'
-Plug 'conweller/findr.vim'
 Plug 'windwp/nvim-autopairs'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope-file-browser.nvim'
+Plug 'github/copilot.vim'
+Plug 'nvim-treesitter/nvim-treesitter'
 
 call plug#end()

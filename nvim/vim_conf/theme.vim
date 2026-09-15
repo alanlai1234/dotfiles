@@ -19,10 +19,10 @@ hi VimwikiBoldItalic guifg=#8982C9
 "hi SignColumn ctermfg=250 ctermbg=236 guifg=#e2e2e3 guibg=#2c2e34
 
 if &background=="dark"
-	colorscheme sonokai
+	colorscheme gruvbox-material
 	"statusline presets
 	let stbg = '#535961'
-	exe 'hi roundfg guifg=' . stbg
+	exe 'hi roundfg guifg=' . stbg . ' guibg=' . synIDattr(hlID("Normal"), "bg", "gui")
 	exe 'hi global guibg=' . stbg . ' guifg=#ffffff'
 	exe 'hi icon guibg=' . stbg . ' guifg=LightBlue'
 	exe 'hi modify guibg=' . stbg . ' guifg=#cf6848'
@@ -30,12 +30,8 @@ if &background=="dark"
 	"other
 	hi PmenuSel guibg=#747a8c guifg=#c8cdde
 	hi TabLineSel guibg=#2c2e34 guifg=white
-	hi SignColumn ctermfg=250 ctermbg=236 guifg=#e2e2e3 guibg=#2c2e34
-	hi TabLineFill guifg=#c8cdde
-
-	"coc.nvim custom popup menu color
-	"hi CocMenuSel guibg=#747a8c 
-
+	"hi SignColumn ctermfg=250 ctermbg=236 guifg=#e2e2e3 guibg=#2c2e34
+	"hi TabLineFill guifg=#c8cdde
 else
 	colorscheme solarized8_high
 

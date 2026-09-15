@@ -39,7 +39,7 @@ nnoremap k gk
 nnoremap j gj
 
 "vim's native search is annoying, often miss click it
-map <C-c> <Nop>
+"map <C-c> <Nop>
 
 " run program
 autocmd Filetype cpp execute "map <silent> <C-x> :w <CR> :VimuxPromptCommand <CR> cd " . expand("%:p:h") ." && g++ " . @% . " -o " . expand("%:p:r") ." && " . expand("%:p:r") ." <CR>"
@@ -48,10 +48,8 @@ autocmd Filetype cpp execute "map <silent> <C-x> :w <CR> :VimuxPromptCommand <CR
 "expand("%:p:r")
 
 "coc
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+nmap <silent> gd :lua vim.lsp.buf.declaration()<CR>
+nmap <silent> gi :lua vim.lsp.buf.implementation()<CR>
 
 "move text block or line
 nnoremap <down> :m .+1<CR>==
@@ -59,8 +57,5 @@ nnoremap <up> :m .-2<CR>==
 vnoremap <down> :m '>+1<CR>gv=gv
 vnoremap <up> :m '<-2<CR>gv=gv
 
-"findr.vim
-nmap <silent> <leader>f :Findr<CR>
-
-"exit terminal mode
-tnoremap <C-\> <C-\><C-n>
+"telescope.nvim
+nmap <silent> <leader>f :Telescope file_browser path=%:p:h select_buffer=true<CR>

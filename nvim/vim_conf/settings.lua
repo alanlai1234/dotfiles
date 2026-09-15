@@ -1,8 +1,5 @@
--- treesitter
-require('nvim-treesitter').install({ 'cpp', 'python', 'javascript'})
-
 -- nvim lsp
-vim.lsp.enable({"clangd", "pyright"})
+vim.lsp.enable({"clangd", "pyright", "eslint"})
 
 -- Set up nvim-cmp.
 local cmp = require'cmp'
@@ -38,18 +35,20 @@ local kind_icons = {
 cmp.setup({
 	snippet = {
 		expand = function(args)
-			vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+			vim.fn["vsnip#anonymous"](args.body)
 		end,
 	},
 	window = {
 		completion = cmp.config.window.bordered(),
+			completion = {
+		},
 	  -- documentation = cmp.config.window.bordered(),
 	},
 	mapping = cmp.mapping.preset.insert({
 	  ['<C-b>'] = cmp.mapping.scroll_docs(-4),
 	  ['<C-f>'] = cmp.mapping.scroll_docs(4),
 	  ['<C-e>'] = cmp.mapping.abort(),
-	  ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+	  ['<CR>'] = cmp.mapping.confirm({ select = false }),
 	  ['<Tab>'] = cmp.mapping(function(fallback)
 		  local col = vim.fn.col('.') - 1
 
@@ -57,8 +56,6 @@ cmp.setup({
 			cmp.select_next_item(select_opts)
 		  elseif col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
 			fallback()
-		  else
-			cmp.complete()
 		  end
 		end, {'i', 's'}),
 
@@ -71,26 +68,21 @@ cmp.setup({
 		end, {'i', 's'}),
 	}),
 	sources = cmp.config.sources({
-	  { name = 'nvim_lsp' },
-	{ name = 'vsnip' }, -- For vsnip users.
-	  -- { name = 'luasnip' }, -- For luasnip users.
-	  -- { name = 'ultisnips' }, -- For ultisnips users.
-	  -- { name = 'snippy' }, -- For snippy users.
-	}, {
-	  { name = 'buffer' },
+		{ name = 'nvim_lsp' },
+		{ name = 'vsnip' },	
+		{ name = 'buffer' },
+		{ name = 'path'}
 	}),
 
-    formatting = {
-		fields = { "kind", "abbr"},
+	formatting = {
+		fields = { "kind", "abbr", "menu"},
 		format = function(entry, vim_item)
-			-- Kind icons
 			vim_item.kind = string.format('%s', kind_icons[vim_item.kind])
-			-- Source
 			vim_item.menu = ({
-				--buffer = "[Buffer]",
-				--nvim_lsp = "[LSP]",
-				--nvim_lua = "[Lua]",
-				--latex_symbols = "[LaTeX]",
+				buffer = "[Buffer]",
+				nvim_lsp = "[LSP]",
+				vsnip = "[vsnip]",
+				nvim_lua = "[Lua]",
 			})[entry.source.name]
 			return vim_item
 		end
@@ -98,6 +90,7 @@ cmp.setup({
 })
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
+vim.lsp.config("eslint", {capabilities = capabilities})
 vim.lsp.config("clangd", {capabilities = capabilities})
 require("tiny-inline-diagnostic").setup()
 
@@ -107,3 +100,8 @@ require("bufferline").setup{}
 
 -- autopair
 require("nvim-autopairs").setup {}
+
+-- telescope.nvim
+require("telescope").load_extension "file_browser"
+
+vim.treesitter.language.register("javascript", "javascriptreact")
