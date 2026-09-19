@@ -1,4 +1,8 @@
-set laststatus=3
+"NOTE: legacy code
+
+
+
+set laststatus=2
 
 " color presets
 hi err guifg=#e85635 guibg=#535961
